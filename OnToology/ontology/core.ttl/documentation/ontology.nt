@@ -1,0 +1,488 @@
+<https://w3id.org/def/easytv#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/elements/1.1/title> "easyTV core model"@en .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" .
+<https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" .
+<https://w3id.org/def/easytv#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to annotate sign language videos with multilingual information."@en .
+<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/#creator
+<http://purl.org/dc/elements/1.1/#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.isocat.org/ns/dcr.rdf#datcat
+<http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#cardinality
+<http://www.w3.org/2002/07/owl#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://babelnet.org/model/babelnet#definition
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#range> <http://babelnet.org/model/babelnet#BabelGloss> .
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the synset definition."@en .
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#label> "Synset definition"@en .
+# 
+# http://lemon-model.net/lemon#canonicalForm
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#lexicalForm> .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#Form> .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#comment> "The canonical (\"dictionary\") form of the lexical entry. This can be used to indicate the \"lemma\" form of a lexical entry"@en .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical form"@en .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#label> "Canonieke vorm"@nl .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#label> "Forma can\u00F3nica"@es .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#label> "Forme canonique"@fr .
+<http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/2000/01/rdf-schema#label> "Kanonische Form"@de .
+# 
+# http://lemon-model.net/lemon#decomposition
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#ComponentList> .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a component of a lexical entry"@en .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "Decompositie"@nl .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "Decomposition"@en .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "Dekompositum"@de .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "Descomposici\u00F3n"@es .
+<http://lemon-model.net/lemon#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "D\u00E9composition"@fr .
+# 
+# http://lemon-model.net/lemon#entry
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#Lexicon> .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an entry in a lexicon"@en .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#label> "Eintrag"@de .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada"@es .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#label> "Entry"@en .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#label> "Entr\u00E9e"@fr .
+<http://lemon-model.net/lemon#entry> <http://www.w3.org/2000/01/rdf-schema#label> "Item"@nl .
+# 
+# http://lemon-model.net/lemon#isReferenceOf
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://lemon-model.net/lemon#reference> .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a reference has a given sense"@en .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "Reference of"@en .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "Referencia de"@es .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "Referentie van"@nl .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "Referenz von"@de .
+<http://lemon-model.net/lemon#isReferenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00E9f\u00E9rence de"@fr .
+# 
+# http://lemon-model.net/lemon#isSenseOf
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://lemon-model.net/lemon#sense> .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a sense is realised by the given lexical entry"@en .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "Acepci\u00F3n de"@es .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "Sense of"@en .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "Signfication de"@fr .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "Sinn von"@de .
+<http://lemon-model.net/lemon#isSenseOf> <http://www.w3.org/2000/01/rdf-schema#label> "Zin van"@nl .
+# 
+# http://lemon-model.net/lemon#lexicalForm
+<http://lemon-model.net/lemon#lexicalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://lemon-model.net/lemon#property
+<http://lemon-model.net/lemon#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://lemon-model.net/lemon#reference
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to an external resource"@en .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#label> "Reference"@en .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#label> "Referencia"@es .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#label> "Referentie"@nl .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#label> "Referenz"@de .
+<http://lemon-model.net/lemon#reference> <http://www.w3.org/2000/01/rdf-schema#label> "R\u00E9f\u00E9rence"@fr .
+# 
+# http://lemon-model.net/lemon#sense
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the sense of a lexical entry"@en .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#label> "Acepci\u00F3n"@es .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#label> "Sense"@en .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#label> "Signification"@fr .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#label> "Sinn"@de .
+<http://lemon-model.net/lemon#sense> <http://www.w3.org/2000/01/rdf-schema#label> "Zin"@nl .
+# 
+# http://lemon-model.net/lemon#senseRelation
+<http://lemon-model.net/lemon#senseRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://lemon-model.net/lemon#subsense
+<http://lemon-model.net/lemon#subsense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#gender
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1297> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-245> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#comment> "A grammatical category that indicates grammatical relationships between words in sentences." .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#label> "grammatical gender" .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty
+<http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#property> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#negative
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1839> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2000/01/rdf-schema#comment> "denotes the negation or the absence" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2000/01/rdf-schema#label> "negative" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#number
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Number> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://purl.org/dc/elements/1.1/#creator> "Wright, Sue Ellen" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1298> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-251> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#comment> "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to." .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#comment> "In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word." .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#label> "grammatical number" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#person
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Person> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1328> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2000/01/rdf-schema#comment> "Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form." .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2000/01/rdf-schema#label> "person" .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#translation
+<http://www.lexinfo.net/ontology/2.0/lexinfo#translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#translation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#senseRelation> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#translation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/easytv#hasRealization
+<https://w3id.org/def/easytv#hasRealization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/easytv#isComponentOf
+<https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/easytv#isComponsedBy> .
+<https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#VideoFrame> .
+<https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#Video> .
+# 
+# https://w3id.org/def/easytv#isComponsedBy
+<https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Video> .
+<https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#VideoFrame> .
+# 
+# https://w3id.org/def/easytv#signForm
+<https://w3id.org/def/easytv#signForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#lexicalForm> .
+<https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalEntry> .
+<https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#Sign> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://lemon-model.net/lemon#language
+<http://lemon-model.net/lemon#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#comment> "The language of a given lexicon. This should be some ISO-639 string"@en .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#label> "Langue"@fr .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#label> "Lengua"@es .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#label> "Sprache"@de .
+<http://lemon-model.net/lemon#language> <http://www.w3.org/2000/01/rdf-schema#label> "Taal"@nl .
+# 
+# http://lemon-model.net/lemon#representation
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#Form> .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#comment> "A realisation of a given form"@en .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#label> "Darstellung"@de .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#label> "Representaci\u00F3n"@es .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#label> "Representation"@en .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#label> "Repr\u00E9sentation"@fr .
+<http://lemon-model.net/lemon#representation> <http://www.w3.org/2000/01/rdf-schema#label> "Voorstelling"@nl .
+# 
+# http://lemon-model.net/lemon#writtenRep
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#representation> .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#Form> .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#comment> "Gives the written representation of a given form"@en .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Representaci\u00F3n escrita"@es .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Repr\u00E9sentation \u00E9crite"@fr .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Schriftelijke voorstelling"@nl .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Schriftliche Darstellung"@de .
+<http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Written representation"@en .
+# 
+# https://w3id.org/def/easytv#url
+<https://w3id.org/def/easytv#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://babelnet.org/model/babelnet#BabelGloss
+<http://babelnet.org/model/babelnet#BabelGloss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lemon-model.net/lemon#Component
+<http://lemon-model.net/lemon#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#Component> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Form> .
+<http://lemon-model.net/lemon#Component> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#Component> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#Component> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
+# 
+# http://lemon-model.net/lemon#ComponentList
+<http://lemon-model.net/lemon#ComponentList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#ComponentList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://lemon-model.net/lemon#ComponentList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://lemon-model.net/lemon#Component> .
+<http://lemon-model.net/lemon#ComponentList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://lemon-model.net/lemon#ComponentList> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://lemon-model.net/lemon#ComponentList> <http://www.w3.org/2000/01/rdf-schema#comment> "A node within a list of components. This should generally be a blank node,see rdf:List"@en .
+# 
+# http://lemon-model.net/lemon#Form
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#representation> .
+_:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#comment> "A given written or spoken realisation of a lexical entry"@en .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "Form"@de .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "Form"@en .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "Forma"@es .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "Forme"@fr .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "Vorm"@nl .
+<http://lemon-model.net/lemon#Form> <http://www.w3.org/2000/01/rdf-schema#label> "\u0424\u043E\u0440\u043C\u0430"@ru .
+# 
+# http://lemon-model.net/lemon#LemonElement
+<http://lemon-model.net/lemon#LemonElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lemon-model.net/lemon#LexicalEntry
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#lexicalForm> .
+_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#canonicalForm> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalSense> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "An entry in the lexicon. This may be any morpheme, word, compound, phrase or clause that is included in the lexicon"@en .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada l\u00E9xica"@es .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Entr\u00E9e lexicale"@fr .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical entry"@en .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikaal item"@nl .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikoneintrag"@de .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#label> "\u041B\u0435\u043A\u0441\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0435\u0434\u0438\u043D\u0438\u0446\u0430"@ru .
+# 
+# http://lemon-model.net/lemon#LexicalSense
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#subsense> .
+_:genid15 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#reference> .
+_:genid13 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Acepci\u00F3n l\u00E9xica"@es .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical sense"@en .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikaal zin"@nl .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikonsinn"@de .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Signification lexicale"@fr .
+# 
+# http://lemon-model.net/lemon#Lexicon
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#entry> .
+_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#language> .
+_:genid17 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#comment> "The lexicon object. This object is specific to the given language and/or domain it describes"@en .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexicon"@en .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexicon"@nl .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexic\u00F3n"@es .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikon"@de .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexique"@fr .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "\u041B\u0435\u043A\u0441\u0438\u043A\u043E\u043D"@ru .
+# 
+# http://lemon-model.net/lemon#Phrase
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LexicalEntry> .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#decomposition> .
+_:genid18 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#comment> "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@de .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@en .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Sintagma"@es .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Syntagme"@fr .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Zinsdeel"@nl .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "\u0424\u0440\u0430\u0437\u0430"@ru .
+# 
+# http://lemon-model.net/lemon#PropertyValue
+<http://lemon-model.net/lemon#PropertyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#Gender
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty
+<http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#PropertyValue> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#Negative
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#Number
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Number> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Number> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.lexinfo.net/ontology/2.0/lexinfo#Person
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/easytv#Sign
+<https://w3id.org/def/easytv#Sign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/easytv#Sign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#Form> .
+# 
+# https://w3id.org/def/easytv#SignLanguageLexicalEntry
+<https://w3id.org/def/easytv#SignLanguageLexicalEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/easytv#SignLanguageLexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+# 
+# https://w3id.org/def/easytv#Video
+<https://w3id.org/def/easytv#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/easytv#VideoFrame
+<https://w3id.org/def/easytv#VideoFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/easytv#WrittenLanguageLexicalEntry
+<https://w3id.org/def/easytv#WrittenLanguageLexicalEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/easytv#WrittenLanguageLexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+_:genid19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

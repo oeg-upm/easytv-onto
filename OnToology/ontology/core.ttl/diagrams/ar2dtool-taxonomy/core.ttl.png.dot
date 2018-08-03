@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "http://www.lexinfo.net/ontology/2.0/lexinfo#Negative" "easytv:Sign" "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender" "http://lemon-model.net/lemon#ComponentList" "http://www.lexinfo.net/ontology/2.0/lexinfo#Person" "http://lemon-model.net/lemon#LexicalEntry" "rdf:List" "http://www.lexinfo.net/ontology/2.0/lexinfo#Number" "http://lemon-model.net/lemon#Form" "http://lemon-model.net/lemon#LemonElement" "http://lemon-model.net/lemon#Lexicon" "easytv:WrittenLanguageLexicalEntry" "4a0195ee9cc7b1337b3f6cb9aaceb341" "easytv:SignLanguageLexicalEntry" "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" "http://lemon-model.net/lemon#Phrase" "http://lemon-model.net/lemon#PropertyValue" "http://lemon-model.net/lemon#LexicalSense" ; /*classes style*/
+	"http://www.lexinfo.net/ontology/2.0/lexinfo#Person" -> "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" [ label = "rdfs:subClassOf" ];
+	"http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" -> "http://lemon-model.net/lemon#PropertyValue" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#Lexicon" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#Form" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"easytv:SignLanguageLexicalEntry" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#Phrase" -> "http://lemon-model.net/lemon#LexicalEntry" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#ComponentList" -> "rdf:List" [ label = "rdfs:subClassOf" ];
+	"easytv:Sign" -> "http://lemon-model.net/lemon#Form" [ label = "rdfs:subClassOf" ];
+	"easytv:WrittenLanguageLexicalEntry" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"http://www.lexinfo.net/ontology/2.0/lexinfo#Number" -> "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" [ label = "rdfs:subClassOf" ];
+	"http://www.lexinfo.net/ontology/2.0/lexinfo#Negative" -> "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" [ label = "rdfs:subClassOf" ];
+	"http://www.lexinfo.net/ontology/2.0/lexinfo#Gender" -> "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#LexicalEntry" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#LexicalSense" -> "http://lemon-model.net/lemon#LemonElement" [ label = "rdfs:subClassOf" ];
+	"http://lemon-model.net/lemon#LexicalSense" -> "4a0195ee9cc7b1337b3f6cb9aaceb341" [ label = "rdfs:subClassOf" ];
+
+}
