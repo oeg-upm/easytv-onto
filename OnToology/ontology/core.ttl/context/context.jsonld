@@ -1,0 +1,229 @@
+{
+  "@context" : {
+    "entry" : {
+      "@id" : "http://lemon-model.net/lemon#entry",
+      "@type" : "@id"
+    },
+    "BabelGloss" : {
+      "@id" : "http://babelnet.org/model/babelnet#BabelGloss"
+    },
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "lexicalForm" : {
+      "@id" : "http://lemon-model.net/lemon#lexicalForm",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "url" : {
+      "@id" : "https://w3id.org/def/easytv#url"
+    },
+    "LexicalSense" : {
+      "@id" : "http://lemon-model.net/lemon#LexicalSense"
+    },
+    "isSenseOf" : {
+      "@id" : "http://lemon-model.net/lemon#isSenseOf",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Video" : {
+      "@id" : "https://w3id.org/def/easytv#Video"
+    },
+    "canonicalForm" : {
+      "@id" : "http://lemon-model.net/lemon#canonicalForm",
+      "@type" : "@id"
+    },
+    "WrittenLanguageLexicalEntry" : {
+      "@id" : "https://w3id.org/def/easytv#WrittenLanguageLexicalEntry"
+    },
+    "decomposition" : {
+      "@id" : "http://lemon-model.net/lemon#decomposition",
+      "@type" : "@id"
+    },
+    "Number" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Number"
+    },
+    "Phrase" : {
+      "@id" : "http://lemon-model.net/lemon#Phrase"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "isComponsedBy" : {
+      "@id" : "https://w3id.org/def/easytv#isComponsedBy",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "isReferenceOf" : {
+      "@id" : "http://lemon-model.net/lemon#isReferenceOf",
+      "@type" : "@id"
+    },
+    "Lexicon" : {
+      "@id" : "http://lemon-model.net/lemon#Lexicon"
+    },
+    "negative" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#negative",
+      "@type" : "@id"
+    },
+    "gender" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#gender",
+      "@type" : "@id"
+    },
+    "Gender" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender"
+    },
+    "VideoFrame" : {
+      "@id" : "https://w3id.org/def/easytv#VideoFrame"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Person"
+    },
+    "senseRelation" : {
+      "@id" : "http://lemon-model.net/lemon#senseRelation",
+      "@type" : "@id"
+    },
+    "Sign" : {
+      "@id" : "https://w3id.org/def/easytv#Sign"
+    },
+    "PropertyValue" : {
+      "@id" : "http://lemon-model.net/lemon#PropertyValue"
+    },
+    "ComponentList" : {
+      "@id" : "http://lemon-model.net/lemon#ComponentList"
+    },
+    "writtenRep" : {
+      "@id" : "http://lemon-model.net/lemon#writtenRep",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Negative" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Negative"
+    },
+    "representation" : {
+      "@id" : "http://lemon-model.net/lemon#representation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "morphosyntacticProperty" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty",
+      "@type" : "@id"
+    },
+    "datcat" : {
+      "@id" : "http://www.isocat.org/ns/dcr.rdf#datcat"
+    },
+    "subsense" : {
+      "@id" : "http://lemon-model.net/lemon#subsense",
+      "@type" : "@id"
+    },
+    "isComponentOf" : {
+      "@id" : "https://w3id.org/def/easytv#isComponentOf",
+      "@type" : "@id"
+    },
+    "LexicalEntry" : {
+      "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+    },
+    "person" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#person",
+      "@type" : "@id"
+    },
+    "signForm" : {
+      "@id" : "https://w3id.org/def/easytv#signForm",
+      "@type" : "@id"
+    },
+    "Form" : {
+      "@id" : "http://lemon-model.net/lemon#Form"
+    },
+    "number" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#number",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "property" : {
+      "@id" : "http://lemon-model.net/lemon#property",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "definition" : {
+      "@id" : "http://babelnet.org/model/babelnet#definition",
+      "@type" : "@id"
+    },
+    "SignLanguageLexicalEntry" : {
+      "@id" : "https://w3id.org/def/easytv#SignLanguageLexicalEntry"
+    },
+    "reference" : {
+      "@id" : "http://lemon-model.net/lemon#reference",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "LemonElement" : {
+      "@id" : "http://lemon-model.net/lemon#LemonElement"
+    },
+    "List" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+    },
+    "hasRealization" : {
+      "@id" : "https://w3id.org/def/easytv#hasRealization",
+      "@type" : "@id"
+    },
+    "MorphosyntacticProperty" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+    },
+    "Component" : {
+      "@id" : "http://lemon-model.net/lemon#Component"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "sense" : {
+      "@id" : "http://lemon-model.net/lemon#sense",
+      "@type" : "@id"
+    },
+    "language" : {
+      "@id" : "http://lemon-model.net/lemon#language",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "translation" : {
+      "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#translation",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    }
+  }
+}
