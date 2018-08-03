@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {1358, 1156}}</string>
+		<string>{{0, 0}, {1418.0054945054944, 1156}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -33,7 +33,7 @@
 	<key>CanvasOrigin</key>
 	<string>{0, 0}</string>
 	<key>CanvasSize</key>
-	<string>{1358, 1156}</string>
+	<string>{1418.0054945054944, 1156}</string>
 	<key>ColumnAlign</key>
 	<integer>1</integer>
 	<key>ColumnSpacing</key>
@@ -4565,7 +4565,7 @@ etv:Sign}</string>
 				<key>ID</key>
 				<integer>42776</integer>
 				<key>Position</key>
-				<real>0.47056283707008884</real>
+				<real>0.47056284546852112</real>
 				<key>RotationType</key>
 				<integer>0</integer>
 			</dict>
@@ -7217,7 +7217,7 @@ Class}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{989.47418059310212, 561.51960823821207}, {264.74553340791829, 40.575387724285292}}</string>
+			<string>{{989.47418059310235, 561.51960823821207}, {213.6149024766919, 40.575387724285292}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -7282,7 +7282,7 @@ Class}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\b\fs24 \cf2 Ontology:\
-     etv: http://easytv.linkeddata.es/def/core#}</string>
+     etv: https://w3id.org/def/easytv#}</string>
 			</dict>
 			<key>TextPlacement</key>
 			<integer>0</integer>
@@ -8068,7 +8068,7 @@ Class}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2018-08-03 10:52:38 +0000</string>
+	<string>2018-08-03 11:17:29 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -8140,13 +8140,15 @@ Class}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>BottomSlabHeight</key>
-		<real>224</real>
+		<real>220</real>
 		<key>CurrentSheet</key>
 		<integer>0</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
+		<key>FitInWindow</key>
+		<true/>
 		<key>Frame</key>
-		<string>{{0, 0}, {1440, 877}}</string>
+		<string>{{0, 4}, {1440, 873}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
@@ -8156,15 +8158,15 @@ Class}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 126.11111445191474}, {992.22224850713542, 813.33335487930913}}</string>
+		<string>{{0, 0}, {1418.0054945054947, 1156}}</string>
 		<key>Zoom</key>
-		<real>0.89999997615814209</real>
+		<real>0.62975778546712802</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>core</string>
+				<real>0.0</real>
 				<real>0.89999997615814209</real>
-				<real>2</real>
 			</array>
 		</array>
 	</dict>
