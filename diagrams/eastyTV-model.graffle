@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {1418.0054945054944, 1156}}</string>
+		<string>{{0, 0}, {1325, 1080.1791713325867}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -33,7 +33,7 @@
 	<key>CanvasOrigin</key>
 	<string>{0, 0}</string>
 	<key>CanvasSize</key>
-	<string>{1418.0054945054944, 1156}</string>
+	<string>{1325, 1080.1791713325867}</string>
 	<key>ColumnAlign</key>
 	<integer>1</integer>
 	<key>ColumnSpacing</key>
@@ -1915,7 +1915,7 @@ lemon:language :: }</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1093.679975554347, 907.19997972249985}, {244.07999454438686, 176.30969274947546}}</string>
+			<string>{{1060.5599762946367, 782.6399825066328}, {244.07999454438686, 176.30969274947546}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -6913,10 +6913,10 @@ rdf:type}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\slleading40\pardirnatural
 
 \b \cf2       
-\b0 bln: http://babelnet.org/model/babelnet#\
+\b0 \cf2 bln: http://babelnet.org/model/babelnet#\
 
-\b       
-\b0 lemon: http://lemon-model.net/lemon#\
+\b \cf2       
+\b0 \cf2 lemon: http://lemon-model.net/lemon#\
       lexinfo: http://www.lexinfo.net/ontology/2.0/lexinfo#\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
@@ -6924,9 +6924,10 @@ rdf:type}</string>
 \b0 \cf2 owl: http://www.w3.org/2002/07/owl#\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\slleading40\pardirnatural
 \cf2       rdfs: http://www.w3.org/2000/01/rdf-schema#\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\slleading40\pardirnatural
 
-\b       
-\b0 skos: http://www.w3.org/2004/02/skos/core#}</string>
+\b \cf2       
+\b0 \cf2 skos: http://www.w3.org/2004/02/skos/core#}</string>
 			</dict>
 			<key>TextPlacement</key>
 			<integer>0</integer>
@@ -8028,7 +8029,7 @@ Class}</string>
 	<key>HPages</key>
 	<integer>3</integer>
 	<key>ImageCounter</key>
-	<integer>31</integer>
+	<integer>32</integer>
 	<key>KeepToScale</key>
 	<false/>
 	<key>Layers</key>
@@ -8068,7 +8069,7 @@ Class}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2018-08-03 11:17:29 +0000</string>
+	<string>2018-08-03 12:46:38 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -8158,15 +8159,15 @@ Class}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1418.0054945054947, 1156}}</string>
+		<string>{{0, 0}, {1325, 1080.1791713325867}}</string>
 		<key>Zoom</key>
-		<real>0.62975778546712802</real>
+		<real>0.6739622641509434</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>core</string>
 				<real>0.0</real>
-				<real>0.89999997615814209</real>
+				<real>0.25</real>
 			</array>
 		</array>
 	</dict>
