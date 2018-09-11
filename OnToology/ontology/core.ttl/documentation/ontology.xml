@@ -21,7 +21,7 @@
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">easytv</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/def/easytv</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represents the core terms to annotate sign language videos with multilingual information.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -129,18 +129,15 @@
     
 
 
-    <!-- http://lemon-model.net/lemon#decomposition -->
+    <!-- http://lemon-model.net/lemon#element -->
 
 
-    <owl:ObjectProperty rdf:about="http://lemon-model.net/lemon#decomposition">
-        <rdfs:domain rdf:resource="http://lemon-model.net/lemon#LexicalEntry"/>
-        <rdfs:range rdf:resource="http://lemon-model.net/lemon#ComponentList"/>
-        <rdfs:comment xml:lang="en">Denotes a component of a lexical entry</rdfs:comment>
-        <rdfs:label xml:lang="nl">Decompositie</rdfs:label>
-        <rdfs:label xml:lang="en">Decomposition</rdfs:label>
-        <rdfs:label xml:lang="de">Dekompositum</rdfs:label>
-        <rdfs:label xml:lang="es">Descomposición</rdfs:label>
-        <rdfs:label xml:lang="fr">Décomposition</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://lemon-model.net/lemon#element">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://lemon-model.net/lemon#Component"/>
+        <rdfs:range rdf:resource="http://lemon-model.net/lemon#LexicalEntry"/>
+        <rdfs:comment xml:lang="en">Denotes the lexical entry represented by the component</rdfs:comment>
+        <rdfs:label xml:lang="en">element</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -355,6 +352,18 @@
     
 
 
+    <!-- https://w3id.org/def/easytv#decomposition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#decomposition">
+        <rdfs:domain rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+        <rdfs:range rdf:resource="http://lemon-model.net/lemon#ComponentList"/>
+        <rdfs:comment xml:lang="en">Denotes a component of a linguisti expression</rdfs:comment>
+        <rdfs:label xml:lang="en">Decomposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/easytv#hasRealization -->
 
 
@@ -389,7 +398,17 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#signForm">
         <rdfs:subPropertyOf rdf:resource="http://lemon-model.net/lemon#lexicalForm"/>
         <rdfs:domain rdf:resource="http://lemon-model.net/lemon#LexicalEntry"/>
-        <rdfs:range rdf:resource="https://w3id.org/def/easytv#Sign"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/easytv#SignedForm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/easytv#signedRep -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#signedRep">
+        <rdfs:domain rdf:resource="https://w3id.org/def/easytv#SignedForm"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/easytv#Video"/>
     </owl:ObjectProperty>
     
 
@@ -652,7 +671,7 @@
         <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#LexicalEntry"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://lemon-model.net/lemon#decomposition"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#decomposition"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -738,20 +757,42 @@
     
 
 
-    <!-- https://w3id.org/def/easytv#Sign -->
+    <!-- https://w3id.org/def/easytv#LinguisticExpression -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/easytv#Sign">
+    <owl:Class rdf:about="https://w3id.org/def/easytv#LinguisticExpression">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lemon-model.net/lemon#language"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Linguistic expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/easytv#SignedForm -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/easytv#SignedForm">
         <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#Form"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/easytv#SignLanguageLexicalEntry -->
+    <!-- https://w3id.org/def/easytv#SignedLinguisticExpression -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/easytv#SignLanguageLexicalEntry">
-        <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#LemonElement"/>
+    <owl:Class rdf:about="https://w3id.org/def/easytv#SignedLinguisticExpression">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#hasRealization"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/easytv#Video"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Signed linguistic expression</rdfs:label>
     </owl:Class>
     
 
@@ -766,15 +807,24 @@
     <!-- https://w3id.org/def/easytv#VideoFrame -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/easytv#VideoFrame"/>
+    <owl:Class rdf:about="https://w3id.org/def/easytv#VideoFrame">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/easytv#Video"/>
+    </owl:Class>
     
 
 
-    <!-- https://w3id.org/def/easytv#WrittenLanguageLexicalEntry -->
+    <!-- https://w3id.org/def/easytv#WrittenLinguisticExpression -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/easytv#WrittenLanguageLexicalEntry">
-        <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#LemonElement"/>
+    <owl:Class rdf:about="https://w3id.org/def/easytv#WrittenLinguisticExpression">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#hasRealization"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/easytv#Video"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Written linguistic expression</rdfs:label>
     </owl:Class>
     
 

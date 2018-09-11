@@ -32,6 +32,9 @@ This section provides details for each class and property defined by easyTV core
          <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
       </li>
       <li>
+         <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
+      </li>
+      <li>
          <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
             title="http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty">
             <span>morphosyntactic property</span>
@@ -59,21 +62,22 @@ This section provides details for each class and property defined by easyTV core
          <a href="#http://lemon-model.net/lemon#Phrase" title="http://lemon-model.net/lemon#Phrase">Phrase</a>
       </li>
       <li>
-         <a href="#Sign" title="https://w3id.org/def/easytv#Sign">
-            <span>sign</span>
+         <a href="#SignedForm" title="https://w3id.org/def/easytv#SignedForm">
+            <span>signed form</span>
          </a>
       </li>
       <li>
-         <a href="#SignLanguageLexicalEntry"
-            title="https://w3id.org/def/easytv#SignLanguageLexicalEntry">
-            <span>sign language lexical entry</span>
+         <a href="#SignedLinguisticExpression"
+            title="https://w3id.org/def/easytv#SignedLinguisticExpression">Signed linguistic expression</a>
+      </li>
+      <li>
+         <a href="#VideoFrame" title="https://w3id.org/def/easytv#VideoFrame">
+            <span>video frame</span>
          </a>
       </li>
       <li>
-         <a href="#WrittenLanguageLexicalEntry"
-            title="https://w3id.org/def/easytv#WrittenLanguageLexicalEntry">
-            <span>written language lexical entry</span>
-         </a>
+         <a href="#WrittenLinguisticExpression"
+            title="https://w3id.org/def/easytv#WrittenLinguisticExpression">Written linguistic expression</a>
       </li>
    </ul>
    <div class="entity" id="http://lemon-model.net/lemon#Component">
@@ -84,6 +88,11 @@ This section provides details for each class and property defined by easyTV core
       <p>
          <strong>IRI:</strong> http://lemon-model.net/lemon#Component</p>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://lemon-model.net/lemon#element" title="http://lemon-model.net/lemon#element">element</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
@@ -126,7 +135,7 @@ This section provides details for each class and property defined by easyTV core
             <span class="logic">or</span> ({ <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">nil</span> })</dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://lemon-model.net/lemon#decomposition" title="http://lemon-model.net/lemon#decomposition">Decomposition</a>
+            <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -153,7 +162,7 @@ This section provides details for each class and property defined by easyTV core
             <span class="logic">min</span> 1</dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Sign" title="https://w3id.org/def/easytv#Sign">sign</a>
+            <a href="#SignedForm" title="https://w3id.org/def/easytv#SignedForm">signed form</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -237,7 +246,6 @@ This section provides details for each class and property defined by easyTV core
          <dt>is in domain of</dt>
          <dd>
             <a href="#http://lemon-model.net/lemon#canonicalForm" title="http://lemon-model.net/lemon#canonicalForm">Canonical form</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://lemon-model.net/lemon#decomposition" title="http://lemon-model.net/lemon#decomposition">Decomposition</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://lemon-model.net/lemon#sense" title="http://lemon-model.net/lemon#sense">Sense</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#signForm" title="https://w3id.org/def/easytv#signForm">sign form</a>
             <sup class="type-op" title="object property">op</sup>
@@ -246,6 +254,7 @@ This section provides details for each class and property defined by easyTV core
          <dd>
             <a href="#http://lemon-model.net/lemon#entry" title="http://lemon-model.net/lemon#entry">Entry</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://lemon-model.net/lemon#isSenseOf" title="http://lemon-model.net/lemon#isSenseOf">Sense of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://lemon-model.net/lemon#element" title="http://lemon-model.net/lemon#element">element</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -337,6 +346,36 @@ This section provides details for each class and property defined by easyTV core
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LinguisticExpression">
+      <h3>Linguistic expression<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#LinguisticExpression</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://lemon-model.net/lemon#language" title="http://lemon-model.net/lemon#language">Language</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#SignedLinguisticExpression"
+               title="https://w3id.org/def/easytv#SignedLinguisticExpression">Signed linguistic expression</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#WrittenLinguisticExpression"
+               title="https://w3id.org/def/easytv#WrittenLinguisticExpression">Written linguistic expression</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -480,23 +519,28 @@ This section provides details for each class and property defined by easyTV core
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://lemon-model.net/lemon#decomposition" title="http://lemon-model.net/lemon#decomposition">Decomposition</a>
+            <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">min</span> 1</dd>
       </dl>
    </div>
-   <div class="entity" id="Sign">
-      <h3>sign<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="SignedForm">
+      <h3>signed form<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/easytv#Sign</p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#SignedForm</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#signedRep" title="https://w3id.org/def/easytv#signedRep">signed rep</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -505,32 +549,71 @@ This section provides details for each class and property defined by easyTV core
          </dd>
       </dl>
    </div>
-   <div class="entity" id="SignLanguageLexicalEntry">
-      <h3>sign language lexical entry<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="SignedLinguisticExpression">
+      <h3>Signed linguistic expression<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/easytv#SignLanguageLexicalEntry</p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#SignedLinguisticExpression</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/easytv#hasRealization">has realization</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="https://w3id.org/def/easytv#Video">video</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="WrittenLanguageLexicalEntry">
-      <h3>written language lexical entry<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="VideoFrame">
+      <h3>video frame<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/easytv#WrittenLanguageLexicalEntry</p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#VideoFrame</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <span class="dotted" title="https://w3id.org/def/easytv#Video">video</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isComponentOf" title="https://w3id.org/def/easytv#isComponentOf">is component of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isComponsedBy" title="https://w3id.org/def/easytv#isComponsedBy">is componsed by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WrittenLinguisticExpression">
+      <h3>Written linguistic expression<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#WrittenLinguisticExpression</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/def/easytv#hasRealization">has realization</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="https://w3id.org/def/easytv#Video">video</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -542,7 +625,10 @@ This section provides details for each class and property defined by easyTV core
          <a href="#http://lemon-model.net/lemon#canonicalForm" title="http://lemon-model.net/lemon#canonicalForm">Canonical form</a>
       </li>
       <li>
-         <a href="#http://lemon-model.net/lemon#decomposition" title="http://lemon-model.net/lemon#decomposition">Decomposition</a>
+         <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
+      </li>
+      <li>
+         <a href="#http://lemon-model.net/lemon#element" title="http://lemon-model.net/lemon#element">element</a>
       </li>
       <li>
          <a href="#http://lemon-model.net/lemon#entry" title="http://lemon-model.net/lemon#entry">Entry</a>
@@ -597,6 +683,11 @@ This section provides details for each class and property defined by easyTV core
          </a>
       </li>
       <li>
+         <a href="#signedRep" title="https://w3id.org/def/easytv#signedRep">
+            <span>signed rep</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://babelnet.org/model/babelnet#definition" title="http://babelnet.org/model/babelnet#definition">Synset definition</a>
       </li>
       <li>
@@ -638,26 +729,53 @@ This section provides details for each class and property defined by easyTV core
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://lemon-model.net/lemon#decomposition">
+   <div class="entity" id="decomposition">
       <h3>Decomposition<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://lemon-model.net/lemon#decomposition</p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#decomposition</p>
       <div class="comment">
-         <span class="markdown">Denotes a component of a lexical entry</span>
+         <span class="markdown">Denotes a component of a linguisti expression</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
+               <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#http://lemon-model.net/lemon#ComponentList" title="http://lemon-model.net/lemon#ComponentList">component list</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://lemon-model.net/lemon#element">
+      <h3>element<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lemon-model.net/lemon#element</p>
+      <div class="comment">
+         <span class="markdown">Denotes the lexical entry represented by the component</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -769,7 +887,7 @@ This section provides details for each class and property defined by easyTV core
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/def/easytv#VideoFrame">video frame</span>
+               <a href="#VideoFrame" title="https://w3id.org/def/easytv#VideoFrame">video frame</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -801,7 +919,7 @@ This section provides details for each class and property defined by easyTV core
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/def/easytv#VideoFrame">video frame</span>
+               <a href="#VideoFrame" title="https://w3id.org/def/easytv#VideoFrame">video frame</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1060,7 +1178,29 @@ This section provides details for each class and property defined by easyTV core
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Sign" title="https://w3id.org/def/easytv#Sign">sign</a>
+               <a href="#SignedForm" title="https://w3id.org/def/easytv#SignedForm">signed form</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="signedRep">
+      <h3>signed rep<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#signedRep</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SignedForm" title="https://w3id.org/def/easytv#SignedForm">signed form</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/def/easytv#Video">video</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

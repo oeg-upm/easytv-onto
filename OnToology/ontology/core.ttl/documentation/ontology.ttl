@@ -14,7 +14,7 @@
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv"^^xsd:string ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv"^^xsd:string ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.1"^^xsd:string .
+                                owl:versionInfo "0.0.2"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -74,16 +74,13 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                         "Kanonische Form"@de .
 
 
-###  http://lemon-model.net/lemon#decomposition
-<http://lemon-model.net/lemon#decomposition> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
-                                             rdfs:range <http://lemon-model.net/lemon#ComponentList> ;
-                                             rdfs:comment "Denotes a component of a lexical entry"@en ;
-                                             rdfs:label "Decompositie"@nl ,
-                                                        "Decomposition"@en ,
-                                                        "Dekompositum"@de ,
-                                                        "Descomposición"@es ,
-                                                        "Décomposition"@fr .
+###  http://lemon-model.net/lemon#element
+<http://lemon-model.net/lemon#element> rdf:type owl:ObjectProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:domain <http://lemon-model.net/lemon#Component> ;
+                                       rdfs:range <http://lemon-model.net/lemon#LexicalEntry> ;
+                                       rdfs:comment "Denotes the lexical entry represented by the component"@en ;
+                                       rdfs:label "element"@en .
 
 
 ###  http://lemon-model.net/lemon#entry
@@ -234,6 +231,14 @@ rdf:first rdf:type owl:ObjectProperty .
 rdf:rest rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/def/easytv#decomposition
+<https://w3id.org/def/easytv#decomposition> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/def/easytv#LinguisticExpression> ;
+                                            rdfs:range <http://lemon-model.net/lemon#ComponentList> ;
+                                            rdfs:comment "Denotes a component of a linguisti expression"@en ;
+                                            rdfs:label "Decomposition"@en .
+
+
 ###  https://w3id.org/def/easytv#hasRealization
 <https://w3id.org/def/easytv#hasRealization> rdf:type owl:ObjectProperty .
 
@@ -255,7 +260,13 @@ rdf:rest rdf:type owl:ObjectProperty .
 <https://w3id.org/def/easytv#signForm> rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
                                        rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
-                                       rdfs:range <https://w3id.org/def/easytv#Sign> .
+                                       rdfs:range <https://w3id.org/def/easytv#SignedForm> .
+
+
+###  https://w3id.org/def/easytv#signedRep
+<https://w3id.org/def/easytv#signedRep> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/def/easytv#SignedForm> ;
+                                        rdfs:range <https://w3id.org/def/easytv#Video> .
 
 
 #################################################################
@@ -431,7 +442,7 @@ rdf:rest rdf:type owl:ObjectProperty .
 <http://lemon-model.net/lemon#Phrase> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://lemon-model.net/lemon#decomposition> ;
+                                                        owl:onProperty <https://w3id.org/def/easytv#decomposition> ;
                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
                                                       ] ;
                                       rdfs:comment "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en ;
@@ -485,14 +496,28 @@ rdf:List rdf:type owl:Class .
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
-###  https://w3id.org/def/easytv#Sign
-<https://w3id.org/def/easytv#Sign> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://lemon-model.net/lemon#Form> .
+###  https://w3id.org/def/easytv#LinguisticExpression
+<https://w3id.org/def/easytv#LinguisticExpression> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://lemon-model.net/lemon#language> ;
+                                                                     owl:someValuesFrom rdfs:Literal
+                                                                   ] ;
+                                                   rdfs:label "Linguistic expression"@en .
 
 
-###  https://w3id.org/def/easytv#SignLanguageLexicalEntry
-<https://w3id.org/def/easytv#SignLanguageLexicalEntry> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> .
+###  https://w3id.org/def/easytv#SignedForm
+<https://w3id.org/def/easytv#SignedForm> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://lemon-model.net/lemon#Form> .
+
+
+###  https://w3id.org/def/easytv#SignedLinguisticExpression
+<https://w3id.org/def/easytv#SignedLinguisticExpression> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/def/easytv#LinguisticExpression> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/def/easytv#hasRealization> ;
+                                                                           owl:someValuesFrom <https://w3id.org/def/easytv#Video>
+                                                                         ] ;
+                                                         rdfs:label "Signed linguistic expression"@en .
 
 
 ###  https://w3id.org/def/easytv#Video
@@ -500,12 +525,18 @@ rdf:List rdf:type owl:Class .
 
 
 ###  https://w3id.org/def/easytv#VideoFrame
-<https://w3id.org/def/easytv#VideoFrame> rdf:type owl:Class .
+<https://w3id.org/def/easytv#VideoFrame> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/def/easytv#Video> .
 
 
-###  https://w3id.org/def/easytv#WrittenLanguageLexicalEntry
-<https://w3id.org/def/easytv#WrittenLanguageLexicalEntry> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> .
+###  https://w3id.org/def/easytv#WrittenLinguisticExpression
+<https://w3id.org/def/easytv#WrittenLinguisticExpression> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://w3id.org/def/easytv#LinguisticExpression> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/def/easytv#hasRealization> ;
+                                                                            owl:someValuesFrom <https://w3id.org/def/easytv#Video>
+                                                                          ] ;
+                                                          rdfs:label "Written linguistic expression"@en .
 
 
 #################################################################
