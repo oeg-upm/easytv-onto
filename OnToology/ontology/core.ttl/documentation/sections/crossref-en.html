@@ -1,18 +1,8 @@
-<h2  id="crossreference" class="list">Cross reference for easyTV core model classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<html><h2 id="crossreference" class="list">Cross reference for easyTV core model classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by easyTV core model.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
-      <li>
-         <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">
-            <span>component</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://lemon-model.net/lemon#ComponentList" title="http://lemon-model.net/lemon#ComponentList">
-            <span>component list</span>
-         </a>
-      </li>
       <li>
          <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
       </li>
@@ -33,6 +23,10 @@ This section provides details for each class and property defined by easyTV core
       </li>
       <li>
          <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
+      </li>
+      <li>
+         <a href="#LinguisticExpressionItem"
+            title="https://w3id.org/def/easytv#LinguisticExpressionItem">Linguistic expression item</a>
       </li>
       <li>
          <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
@@ -80,66 +74,6 @@ This section provides details for each class and property defined by easyTV core
             title="https://w3id.org/def/easytv#WrittenLinguisticExpression">Written linguistic expression</a>
       </li>
    </ul>
-   <div class="entity" id="http://lemon-model.net/lemon#Component">
-      <h3>component<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lemon-model.net/lemon#Component</p>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#http://lemon-model.net/lemon#element" title="http://lemon-model.net/lemon#element">element</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://lemon-model.net/lemon#ComponentList">
-      <h3>component list<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://lemon-model.net/lemon#ComponentList</p>
-      <div class="comment">
-         <span class="markdown">A node within a list of components. This should generally be a blank node,see rdf:List</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#first">first</span>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">rest</span>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://lemon-model.net/lemon#ComponentList" title="http://lemon-model.net/lemon#ComponentList">component list</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">or</span> ({ <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">nil</span> })</dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://lemon-model.net/lemon#Form">
       <h3>Form<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -174,12 +108,12 @@ This section provides details for each class and property defined by easyTV core
          <dt>is in range of</dt>
          <dd>
             <a href="#http://lemon-model.net/lemon#canonicalForm" title="http://lemon-model.net/lemon#canonicalForm">Canonical form</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasForm" title="https://w3id.org/def/easytv#hasForm">has form</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
+            <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
             <sup class="type-c" title="class">c</sup>
@@ -259,8 +193,7 @@ This section provides details for each class and property defined by easyTV core
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
+            <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
             <sup class="type-c" title="class">c</sup>
@@ -302,8 +235,7 @@ This section provides details for each class and property defined by easyTV core
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
+            <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
             <sup class="type-c" title="class">c</sup>
@@ -341,8 +273,7 @@ This section provides details for each class and property defined by easyTV core
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
+            <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
             <sup class="type-c" title="class">c</sup>
@@ -375,6 +306,31 @@ This section provides details for each class and property defined by easyTV core
          <dt>is in domain of</dt>
          <dd>
             <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LinguisticExpressionItem">
+      <h3>Linguistic expression item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#LinguisticExpressionItem</p>
+      <div class="comment">
+         <span class="markdown">Items in a linguistic expression</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasForm" title="https://w3id.org/def/easytv#hasForm">has form</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nextItem" title="https://w3id.org/def/easytv#nextItem">next item</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#nextItem" title="https://w3id.org/def/easytv#nextItem">next item</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -642,6 +598,11 @@ This section provides details for each class and property defined by easyTV core
             title="http://www.lexinfo.net/ontology/2.0/lexinfo#number">grammatical number</a>
       </li>
       <li>
+         <a href="#hasForm" title="https://w3id.org/def/easytv#hasForm">
+            <span>has form</span>
+         </a>
+      </li>
+      <li>
          <a href="#isComponentOf" title="https://w3id.org/def/easytv#isComponentOf">
             <span>is component of</span>
          </a>
@@ -660,6 +621,11 @@ This section provides details for each class and property defined by easyTV core
       <li>
          <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#negative"
             title="http://www.lexinfo.net/ontology/2.0/lexinfo#negative">negative</a>
+      </li>
+      <li>
+         <a href="#nextItem" title="https://w3id.org/def/easytv#nextItem">
+            <span>next item</span>
+         </a>
       </li>
       <li>
          <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#person"
@@ -748,7 +714,8 @@ This section provides details for each class and property defined by easyTV core
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://lemon-model.net/lemon#ComponentList" title="http://lemon-model.net/lemon#ComponentList">component list</a>
+               <a href="#LinguisticExpressionItem"
+                  title="https://w3id.org/def/easytv#LinguisticExpressionItem">Linguistic expression item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -768,11 +735,6 @@ This section provides details for each class and property defined by easyTV core
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://lemon-model.net/lemon#Component" title="http://lemon-model.net/lemon#Component">component</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
@@ -871,6 +833,29 @@ This section provides details for each class and property defined by easyTV core
             <dd>
                <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#Number"
                   title="http://www.lexinfo.net/ontology/2.0/lexinfo#Number">number</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasForm">
+      <h3>has form<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#hasForm</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LinguisticExpressionItem"
+                  title="https://w3id.org/def/easytv#LinguisticExpressionItem">Linguistic expression item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1003,6 +988,32 @@ This section provides details for each class and property defined by easyTV core
             <dd>
                <a href="#http://www.lexinfo.net/ontology/2.0/lexinfo#Negative"
                   title="http://www.lexinfo.net/ontology/2.0/lexinfo#Negative">negative</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nextItem">
+      <h3>next item<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#nextItem</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LinguisticExpressionItem"
+                  title="https://w3id.org/def/easytv#LinguisticExpressionItem">Linguistic expression item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#LinguisticExpressionItem"
+                  title="https://w3id.org/def/easytv#LinguisticExpressionItem">Linguistic expression item</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1353,3 +1364,4 @@ This section provides details for each class and property defined by easyTV core
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
+</html>

@@ -1,0 +1,1004 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#representation"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#language"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/easytv#decomposition"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#language"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/easytv#hasRealization"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/easytv#hasRealization"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#lexicalForm"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#canonicalForm"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid8"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#reference"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#subsense"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#entry"
+  } ]
+}, {
+  "@id" : "http://babelnet.org/model/babelnet#BabelGloss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://babelnet.org/model/babelnet#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Points to the synset definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Synset definition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://babelnet.org/model/babelnet#BabelGloss"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#Form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A given written or spoken realisation of a lexical entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Form"
+  }, {
+    "@language" : "en",
+    "@value" : "Form"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma"
+  }, {
+    "@language" : "fr",
+    "@value" : "Forme"
+  }, {
+    "@language" : "nl",
+    "@value" : "Vorm"
+  }, {
+    "@language" : "ru",
+    "@value" : "Форма"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#LemonElement"
+  }, {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  }, {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  }, {
+    "@id" : "http://lemon-model.net/lemon#Lexicon"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#LemonElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#LexicalEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entry in the lexicon. This may be any morpheme, word, compound, phrase or clause that is included in the lexicon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Entrada léxica"
+  }, {
+    "@language" : "fr",
+    "@value" : "Entrée lexicale"
+  }, {
+    "@language" : "en",
+    "@value" : "Lexical entry"
+  }, {
+    "@language" : "nl",
+    "@value" : "Lexikaal item"
+  }, {
+    "@language" : "de",
+    "@value" : "Lexikoneintrag"
+  }, {
+    "@language" : "ru",
+    "@value" : "Лексическая единица"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#LemonElement"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  }, {
+    "@id" : "http://lemon-model.net/lemon#Lexicon"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#LexicalSense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Acepción léxica"
+  }, {
+    "@language" : "en",
+    "@value" : "Lexical sense"
+  }, {
+    "@language" : "nl",
+    "@value" : "Lexikaal zin"
+  }, {
+    "@language" : "de",
+    "@value" : "Lexikonsinn"
+  }, {
+    "@language" : "fr",
+    "@value" : "Signification lexicale"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#LemonElement"
+  }, {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://lemon-model.net/lemon#Lexicon"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#Lexicon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The lexicon object. This object is specific to the given language and/or domain it describes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lexicon"
+  }, {
+    "@language" : "nl",
+    "@value" : "Lexicon"
+  }, {
+    "@language" : "es",
+    "@value" : "Lexicón"
+  }, {
+    "@language" : "de",
+    "@value" : "Lexikon"
+  }, {
+    "@language" : "fr",
+    "@value" : "Lexique"
+  }, {
+    "@language" : "ru",
+    "@value" : "Лексикон"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#LemonElement"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#Phrase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Phrase"
+  }, {
+    "@language" : "en",
+    "@value" : "Phrase"
+  }, {
+    "@language" : "es",
+    "@value" : "Sintagma"
+  }, {
+    "@language" : "fr",
+    "@value" : "Syntagme"
+  }, {
+    "@language" : "nl",
+    "@value" : "Zinsdeel"
+  }, {
+    "@language" : "ru",
+    "@value" : "Фраза"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  }, {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#PropertyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#canonicalForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The canonical (\"dictionary\") form of the lexical entry. This can be used to indicate the \"lemma\" form of a lexical entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Canonical form"
+  }, {
+    "@language" : "nl",
+    "@value" : "Canonieke vorm"
+  }, {
+    "@language" : "es",
+    "@value" : "Forma canónica"
+  }, {
+    "@language" : "fr",
+    "@value" : "Forme canonique"
+  }, {
+    "@language" : "de",
+    "@value" : "Kanonische Form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#Form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#lexicalForm"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Denotes the lexical entry represented by the component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#entry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates an entry in a lexicon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#Lexicon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Eintrag"
+  }, {
+    "@language" : "es",
+    "@value" : "Entrada"
+  }, {
+    "@language" : "en",
+    "@value" : "Entry"
+  }, {
+    "@language" : "fr",
+    "@value" : "Entrée"
+  }, {
+    "@language" : "nl",
+    "@value" : "Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#isReferenceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicate that a reference has a given sense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reference of"
+  }, {
+    "@language" : "es",
+    "@value" : "Referencia de"
+  }, {
+    "@language" : "nl",
+    "@value" : "Referentie van"
+  }, {
+    "@language" : "de",
+    "@value" : "Referenz von"
+  }, {
+    "@language" : "fr",
+    "@value" : "Référence de"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#reference"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#isSenseOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicate that a sense is realised by the given lexical entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Acepción de"
+  }, {
+    "@language" : "en",
+    "@value" : "Sense of"
+  }, {
+    "@language" : "fr",
+    "@value" : "Signfication de"
+  }, {
+    "@language" : "de",
+    "@value" : "Sinn von"
+  }, {
+    "@language" : "nl",
+    "@value" : "Zin van"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#sense"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The language of a given lexicon. This should be some ISO-639 string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  }, {
+    "@language" : "fr",
+    "@value" : "Langue"
+  }, {
+    "@language" : "es",
+    "@value" : "Lengua"
+  }, {
+    "@language" : "de",
+    "@value" : "Sprache"
+  }, {
+    "@language" : "nl",
+    "@value" : "Taal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#lexicalForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#reference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A reference to an external resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reference"
+  }, {
+    "@language" : "es",
+    "@value" : "Referencia"
+  }, {
+    "@language" : "nl",
+    "@value" : "Referentie"
+  }, {
+    "@language" : "de",
+    "@value" : "Referenz"
+  }, {
+    "@language" : "fr",
+    "@value" : "Référence"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#representation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A realisation of a given form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#Form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Darstellung"
+  }, {
+    "@language" : "es",
+    "@value" : "Representación"
+  }, {
+    "@language" : "en",
+    "@value" : "Representation"
+  }, {
+    "@language" : "fr",
+    "@value" : "Représentation"
+  }, {
+    "@language" : "nl",
+    "@value" : "Voorstelling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the sense of a lexical entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Acepción"
+  }, {
+    "@language" : "en",
+    "@value" : "Sense"
+  }, {
+    "@language" : "fr",
+    "@value" : "Signification"
+  }, {
+    "@language" : "de",
+    "@value" : "Sinn"
+  }, {
+    "@language" : "nl",
+    "@value" : "Zin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalSense"
+  } ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#senseRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#subsense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://lemon-model.net/lemon#writtenRep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Gives the written representation of a given form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#Form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Representación escrita"
+  }, {
+    "@language" : "fr",
+    "@value" : "Représentation écrite"
+  }, {
+    "@language" : "nl",
+    "@value" : "Schriftelijke voorstelling"
+  }, {
+    "@language" : "de",
+    "@value" : "Schriftliche Darstellung"
+  }, {
+    "@language" : "en",
+    "@value" : "Written representation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#representation"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/#creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.isocat.org/ns/dcr.rdf#datcat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#PropertyValue"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Negative",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.isocat.org/ns/dcr.rdf#datcat" : [ {
+    "@id" : "http://www.isocat.org/datcat/DC-1297"
+  }, {
+    "@id" : "http://www.isocat.org/datcat/DC-245"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A grammatical category that indicates grammatical relationships between words in sentences."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "grammatical gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#property"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#negative",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/#creator" : [ {
+    "@value" : "Francopoulo, Gil"
+  } ],
+  "http://www.isocat.org/ns/dcr.rdf#datcat" : [ {
+    "@id" : "http://www.isocat.org/datcat/DC-1839"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "denotes the negation or the absence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "negative"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Negative"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1:0"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/#creator" : [ {
+    "@value" : "Francopoulo, Gil"
+  }, {
+    "@value" : "Wright, Sue Ellen"
+  } ],
+  "http://www.isocat.org/ns/dcr.rdf#datcat" : [ {
+    "@id" : "http://www.isocat.org/datcat/DC-1298"
+  }, {
+    "@id" : "http://www.isocat.org/datcat/DC-251"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to."
+  }, {
+    "@value" : "In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "grammatical number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1:0"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/#creator" : [ {
+    "@value" : "Francopoulo, Gil"
+  } ],
+  "http://www.isocat.org/ns/dcr.rdf#datcat" : [ {
+    "@id" : "http://www.isocat.org/datcat/DC-1328"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1:0"
+  } ]
+}, {
+  "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#translation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#senseRelation"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@id" : "http://www.oeg-upm.net/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "easyTV core model"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://purl.org/net/mpoveda"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "easytv"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/def/easytv"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This ontology represents the core terms to annotate sign language videos with multilingual information."
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#LinguisticExpression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Linguistic expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Items in a linguistic expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Linguistic expression item"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#SignedForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#Form"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#SignedLinguisticExpression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Signed linguistic expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
+  }, {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#Video",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#VideoFrame",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#WrittenLinguisticExpression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Written linguistic expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
+  }, {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#decomposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Denotes a component of a linguisti expression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Decomposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#hasForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lemon-model.net/lemon#Form"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#hasRealization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#isComponentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#VideoFrame"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/easytv#isComponsedBy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#isComponsedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#VideoFrame"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#nextItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#signForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://lemon-model.net/lemon#LexicalEntry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#SignedForm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://lemon-model.net/lemon#lexicalForm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#signedRep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#SignedForm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+} ]
