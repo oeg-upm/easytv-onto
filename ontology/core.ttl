@@ -21,7 +21,7 @@
 <https://w3id.org/def/easytv#> a owl:Ontology ;
 	dcterms:creator <http://purl.org/net/mpoveda> ;
 	vann:preferredNamespacePrefix "easytv" ;
-	owl:versionInfo "0.0.2" ;
+	owl:versionInfo "0.0.3" ;
 	vann:preferredNamespaceUri "https://w3id.org/def/easytv" ;
 	rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
@@ -94,7 +94,6 @@ vs:term_status a owl:AnnotationProperty .
 # http://lemon-model.net/lemon#element
 
 <http://lemon-model.net/lemon#element> a owl:ObjectProperty , owl:FunctionalProperty ;
-	rdfs:domain <http://lemon-model.net/lemon#Component> ;
 	rdfs:range <http://lemon-model.net/lemon#LexicalEntry> ;
 	rdfs:comment "Denotes the lexical entry represented by the component"@en ;
 	rdfs:label "element"@en .
@@ -214,21 +213,19 @@ vs:term_status a owl:AnnotationProperty .
 	rdfs:subPropertyOf <http://lemon-model.net/lemon#senseRelation> ;
 	rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 # 
-# http://www.w3.org/1999/02/22-rdf-syntax-ns#first
-
-rdf:first a owl:ObjectProperty .
-# 
-# http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
-
-rdf:rest a owl:ObjectProperty .
-# 
 # https://w3id.org/def/easytv#decomposition
 
 :decomposition a owl:ObjectProperty ;
 	rdfs:domain :LinguisticExpression ;
-	rdfs:range <http://lemon-model.net/lemon#ComponentList> ;
+	rdfs:range :LinguisticExpressionItem ;
 	rdfs:comment "Denotes a component of a linguisti expression"@en ;
 	rdfs:label "Decomposition"@en .
+# 
+# https://w3id.org/def/easytv#hasForm
+
+:hasForm a owl:ObjectProperty ;
+	rdfs:domain :LinguisticExpressionItem ;
+	rdfs:range <http://lemon-model.net/lemon#Form> .
 # 
 # https://w3id.org/def/easytv#hasRealization
 
@@ -246,6 +243,12 @@ rdf:rest a owl:ObjectProperty .
 :isComponsedBy a owl:ObjectProperty ;
 	rdfs:domain :Video ;
 	rdfs:range :VideoFrame .
+# 
+# https://w3id.org/def/easytv#nextItem
+
+:nextItem a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:domain :LinguisticExpressionItem ;
+	rdfs:range :LinguisticExpressionItem .
 # 
 # https://w3id.org/def/easytv#signForm
 
@@ -310,53 +313,12 @@ rdf:rest a owl:ObjectProperty .
 
 <http://babelnet.org/model/babelnet#BabelGloss> a owl:Class .
 # 
-# http://lemon-model.net/lemon#Component
-
-<http://lemon-model.net/lemon#Component> a owl:Class ;
-	owl:disjointWith <http://lemon-model.net/lemon#Form> , <http://lemon-model.net/lemon#LexicalEntry> , <http://lemon-model.net/lemon#LexicalSense> , <http://lemon-model.net/lemon#Lexicon> .
-# 
-# http://lemon-model.net/lemon#ComponentList
-
-<http://lemon-model.net/lemon#ComponentList> a owl:Class ;
-	rdfs:subClassOf rdf:List , _:genid1 .
-
-_:genid1 a owl:Restriction ;
-	owl:onProperty rdf:first ;
-	owl:allValuesFrom <http://lemon-model.net/lemon#Component> .
-
-<http://lemon-model.net/lemon#ComponentList> rdfs:subClassOf _:genid2 .
-
-_:genid2 a owl:Restriction ;
-	owl:onProperty rdf:rest ;
-	owl:allValuesFrom _:genid3 .
-
-_:genid3 a owl:Class ;
-	owl:unionOf _:genid7 .
-
-_:genid7 a rdf:List ;
-	rdf:first <http://lemon-model.net/lemon#ComponentList> ;
-	rdf:rest _:genid4 .
-
-_:genid4 a rdf:List ;
-	rdf:first _:genid5 .
-
-_:genid5 a owl:Class ;
-	owl:oneOf _:genid6 .
-
-_:genid6 a rdf:List ;
-	rdf:first rdf:nil ;
-	rdf:rest rdf:nil .
-
-_:genid4 rdf:rest rdf:nil .
-
-<http://lemon-model.net/lemon#ComponentList> rdfs:comment "A node within a list of components. This should generally be a blank node,see rdf:List"@en .
-# 
 # http://lemon-model.net/lemon#Form
 
 <http://lemon-model.net/lemon#Form> a owl:Class ;
-	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid8 .
+	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid1 .
 
-_:genid8 a owl:Restriction ;
+_:genid1 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#representation> ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -371,15 +333,15 @@ _:genid8 a owl:Restriction ;
 # http://lemon-model.net/lemon#LexicalEntry
 
 <http://lemon-model.net/lemon#LexicalEntry> a owl:Class ;
-	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid9 .
+	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid2 .
 
-_:genid9 a owl:Restriction ;
+_:genid2 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#lexicalForm> ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
-<http://lemon-model.net/lemon#LexicalEntry> rdfs:subClassOf _:genid10 .
+<http://lemon-model.net/lemon#LexicalEntry> rdfs:subClassOf _:genid3 .
 
-_:genid10 a owl:Restriction ;
+_:genid3 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#canonicalForm> ;
 	owl:maxCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -390,28 +352,28 @@ _:genid10 a owl:Restriction ;
 # http://lemon-model.net/lemon#LexicalSense
 
 <http://lemon-model.net/lemon#LexicalSense> a owl:Class ;
-	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid11 .
+	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid4 .
 
-_:genid11 a owl:Class ;
-	owl:unionOf _:genid14 .
+_:genid4 a owl:Class ;
+	owl:unionOf _:genid7 .
 
-_:genid14 a rdf:List ;
-	rdf:first _:genid15 .
+_:genid7 a rdf:List ;
+	rdf:first _:genid8 .
 
-_:genid15 a owl:Restriction ;
+_:genid8 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#subsense> ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
-_:genid14 rdf:rest _:genid12 .
+_:genid7 rdf:rest _:genid5 .
 
-_:genid12 a rdf:List ;
-	rdf:first _:genid13 .
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
 
-_:genid13 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#reference> ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-_:genid12 rdf:rest rdf:nil .
+_:genid5 rdf:rest rdf:nil .
 
 <http://lemon-model.net/lemon#LexicalSense> owl:disjointWith <http://lemon-model.net/lemon#Lexicon> ;
 	rdfs:comment "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en ;
@@ -420,15 +382,15 @@ _:genid12 rdf:rest rdf:nil .
 # http://lemon-model.net/lemon#Lexicon
 
 <http://lemon-model.net/lemon#Lexicon> a owl:Class ;
-	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid16 .
+	rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> , _:genid9 .
 
-_:genid16 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#entry> ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
-<http://lemon-model.net/lemon#Lexicon> rdfs:subClassOf _:genid17 .
+<http://lemon-model.net/lemon#Lexicon> rdfs:subClassOf _:genid10 .
 
-_:genid17 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#language> ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
@@ -438,9 +400,9 @@ _:genid17 a owl:Restriction ;
 # http://lemon-model.net/lemon#Phrase
 
 <http://lemon-model.net/lemon#Phrase> a owl:Class ;
-	rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> , _:genid18 .
+	rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> , _:genid11 .
 
-_:genid18 a owl:Restriction ;
+_:genid11 a owl:Restriction ;
 	owl:onProperty :decomposition ;
 	owl:minCardinality "1"^^xsd:nonNegativeInteger .
 
@@ -481,10 +443,6 @@ _:genid18 a owl:Restriction ;
 	rdfs:subClassOf <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
 	rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 # 
-# http://www.w3.org/1999/02/22-rdf-syntax-ns#List
-
-rdf:List a owl:Class .
-# 
 # http://www.w3.org/2004/02/skos/core#Concept
 
 <http://www.w3.org/2004/02/skos/core#Concept> a owl:Class .
@@ -492,13 +450,19 @@ rdf:List a owl:Class .
 # https://w3id.org/def/easytv#LinguisticExpression
 
 :LinguisticExpression a owl:Class ;
-	rdfs:subClassOf _:genid19 .
+	rdfs:subClassOf _:genid12 .
 
-_:genid19 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty <http://lemon-model.net/lemon#language> ;
 	owl:someValuesFrom rdfs:Literal .
 
 :LinguisticExpression rdfs:label "Linguistic expression"@en .
+# 
+# https://w3id.org/def/easytv#LinguisticExpressionItem
+
+:LinguisticExpressionItem a owl:Class ;
+	rdfs:comment "Items in a linguistic expression"@en ;
+	rdfs:label "Linguistic expression item"@en .
 # 
 # https://w3id.org/def/easytv#SignedForm
 
@@ -508,9 +472,9 @@ _:genid19 a owl:Restriction ;
 # https://w3id.org/def/easytv#SignedLinguisticExpression
 
 :SignedLinguisticExpression a owl:Class ;
-	rdfs:subClassOf :LinguisticExpression , _:genid20 .
+	rdfs:subClassOf :LinguisticExpression , _:genid13 .
 
-_:genid20 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty :hasRealization ;
 	owl:someValuesFrom :Video .
 
@@ -528,9 +492,9 @@ _:genid20 a owl:Restriction ;
 # https://w3id.org/def/easytv#WrittenLinguisticExpression
 
 :WrittenLinguisticExpression a owl:Class ;
-	rdfs:subClassOf :LinguisticExpression , _:genid21 .
+	rdfs:subClassOf :LinguisticExpression , _:genid14 .
 
-_:genid21 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty :hasRealization ;
 	owl:someValuesFrom :Video .
 
@@ -550,5 +514,5 @@ _:genid21 a owl:Restriction ;
 rdf:nil a owl:NamedIndividual .
 # 
 
-_:genid22 owl:cardinality "1"^^xsd:nonNegativeInteger .
+_:genid15 owl:cardinality "1"^^xsd:nonNegativeInteger .
 # Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
