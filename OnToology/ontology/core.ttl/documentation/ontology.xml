@@ -783,6 +783,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/easytv#SignedForm">
         <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#Form"/>
+        <rdfs:label xml:lang="en">Signed form</rdfs:label>
     </owl:Class>
     
 

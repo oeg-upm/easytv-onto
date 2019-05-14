@@ -508,7 +508,8 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/easytv#SignedForm
 :SignedForm rdf:type owl:Class ;
-            rdfs:subClassOf <http://lemon-model.net/lemon#Form> .
+            rdfs:subClassOf <http://lemon-model.net/lemon#Form> ;
+            rdfs:label "Signed form"@en .
 
 
 ###  https://w3id.org/def/easytv#SignedLinguisticExpression

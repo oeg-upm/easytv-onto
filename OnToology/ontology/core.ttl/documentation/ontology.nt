@@ -465,6 +465,7 @@ _:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # https://w3id.org/def/easytv#SignedForm
 <https://w3id.org/def/easytv#SignedForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/easytv#SignedForm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#Form> .
+<https://w3id.org/def/easytv#SignedForm> <http://www.w3.org/2000/01/rdf-schema#label> "Signed form"@en .
 # 
 # https://w3id.org/def/easytv#SignedLinguisticExpression
 <https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
