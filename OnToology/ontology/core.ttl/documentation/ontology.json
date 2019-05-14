@@ -882,6 +882,10 @@
 }, {
   "@id" : "https://w3id.org/def/easytv#SignedForm",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Signed form"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://lemon-model.net/lemon#Form"
   } ]
