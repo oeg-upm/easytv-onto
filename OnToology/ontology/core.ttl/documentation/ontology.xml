@@ -21,7 +21,7 @@
         <vann:preferredNamespacePrefix>easytv</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/easytv</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represents the core terms to annotate sign language videos with multilingual information.</rdfs:comment>
-        <owl:versionInfo>0.0.3</owl:versionInfo>
+        <owl:versionInfo>0.0.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -440,6 +440,17 @@
     
 
 
+    <!-- https://w3id.org/def/easytv#relates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#relates">
+        <rdfs:domain rdf:resource="https://w3id.org/def/easytv#Translation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+        <rdfs:comment xml:lang="en">Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/easytv#signForm -->
 
 
@@ -575,7 +586,15 @@
     <!-- http://lemon-model.net/lemon#LemonElement -->
 
 
-    <owl:Class rdf:about="http://lemon-model.net/lemon#LemonElement"/>
+    <owl:Class rdf:about="http://lemon-model.net/lemon#LemonElement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#relates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -800,6 +819,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Signed linguistic expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/easytv#Translation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/easytv#Translation">
+        <rdfs:comment xml:lang="en">Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)</rdfs:comment>
     </owl:Class>
     
 

@@ -14,7 +14,7 @@
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.3" .
+                                owl:versionInfo "0.0.4" .
 
 #################################################################
 #    Annotation properties
@@ -284,6 +284,13 @@ owl:cardinality rdf:type owl:AnnotationProperty .
           rdfs:range :LinguisticExpressionItem .
 
 
+###  https://w3id.org/def/easytv#relates
+:relates rdf:type owl:ObjectProperty ;
+         rdfs:domain :Translation ;
+         rdfs:range :LinguisticExpression ;
+         rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+
+
 ###  https://w3id.org/def/easytv#signForm
 :signForm rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
@@ -369,7 +376,12 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 
 
 ###  http://lemon-model.net/lemon#LemonElement
-<http://lemon-model.net/lemon#LemonElement> rdf:type owl:Class .
+<http://lemon-model.net/lemon#LemonElement> rdf:type owl:Class ;
+                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :relates ;
+                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass :LinguisticExpression
+                                                            ] .
 
 
 ###  http://lemon-model.net/lemon#LexicalEntry
@@ -520,6 +532,11 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                               owl:someValuesFrom :Video
                                             ] ;
                             rdfs:label "Signed linguistic expression"@en .
+
+
+###  https://w3id.org/def/easytv#Translation
+:Translation rdf:type owl:Class ;
+             rdfs:comment "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
 
 
 ###  https://w3id.org/def/easytv#Video

@@ -30,6 +30,9 @@
       "@id" : "http://lemon-model.net/lemon#isSenseOf",
       "@type" : "@id"
     },
+    "Translation" : {
+      "@id" : "https://w3id.org/def/easytv#Translation"
+    },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
@@ -178,6 +181,10 @@
     },
     "reference" : {
       "@id" : "http://lemon-model.net/lemon#reference",
+      "@type" : "@id"
+    },
+    "relates" : {
+      "@id" : "https://w3id.org/def/easytv#relates",
       "@type" : "@id"
     },
     "title" : {

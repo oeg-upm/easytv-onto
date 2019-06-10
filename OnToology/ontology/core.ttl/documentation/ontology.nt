@@ -6,7 +6,7 @@
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" .
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" .
 <https://w3id.org/def/easytv#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to annotate sign language videos with multilingual information."@en .
-<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3" .
+<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.4" .
 # 
 # 
 # #################################################################
@@ -248,6 +248,12 @@
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
 # 
+# https://w3id.org/def/easytv#relates
+<https://w3id.org/def/easytv#relates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Translation> .
+<https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpression> .
+<https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+# 
 # https://w3id.org/def/easytv#signForm
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#lexicalForm> .
@@ -336,18 +342,23 @@ _:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/
 # 
 # http://lemon-model.net/lemon#LemonElement
 <http://lemon-model.net/lemon#LemonElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lemon-model.net/lemon#LemonElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#relates> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/easytv#LinguisticExpression> .
 # 
 # http://lemon-model.net/lemon#LexicalEntry
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
-<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#lexicalForm> .
-_:genid2 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#canonicalForm> .
-_:genid3 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#lexicalForm> .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#canonicalForm> .
+_:genid4 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#LexicalSense> .
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
 <http://lemon-model.net/lemon#LexicalEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "An entry in the lexicon. This may be any morpheme, word, compound, phrase or clause that is included in the lexicon"@en .
@@ -361,21 +372,21 @@ _:genid3 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/
 # http://lemon-model.net/lemon#LexicalSense
 <http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
-<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#subsense> .
-_:genid8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#reference> .
-_:genid6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#subsense> .
+_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#reference> .
+_:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> .
 <http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en .
 <http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Acepción léxica"@es .
@@ -387,14 +398,14 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://lemon-model.net/lemon#Lexicon
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> .
-<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#entry> .
-_:genid9 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#language> .
-_:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#entry> .
+_:genid10 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#language> .
+_:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#comment> "The lexicon object. This object is specific to the given language and/or domain it describes"@en .
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexicon"@en .
 <http://lemon-model.net/lemon#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexicon"@nl .
@@ -406,10 +417,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 # http://lemon-model.net/lemon#Phrase
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LexicalEntry> .
-<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#decomposition> .
-_:genid11 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#decomposition> .
+_:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#comment> "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@de .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@en .
@@ -451,10 +462,10 @@ _:genid11 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # 
 # https://w3id.org/def/easytv#LinguisticExpression
 <https://w3id.org/def/easytv#LinguisticExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/easytv#LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#language> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/easytv#LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://lemon-model.net/lemon#language> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/easytv#LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Linguistic expression"@en .
 # 
 # https://w3id.org/def/easytv#LinguisticExpressionItem
@@ -470,11 +481,15 @@ _:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # https://w3id.org/def/easytv#SignedLinguisticExpression
 <https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/easytv#LinguisticExpression> .
-<https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#hasRealization> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/easytv#Video> .
+<https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#hasRealization> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/easytv#Video> .
 <https://w3id.org/def/easytv#SignedLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Signed linguistic expression"@en .
+# 
+# https://w3id.org/def/easytv#Translation
+<https://w3id.org/def/easytv#Translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/easytv#Translation> <http://www.w3.org/2000/01/rdf-schema#comment> "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
 # 
 # https://w3id.org/def/easytv#Video
 <https://w3id.org/def/easytv#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -486,10 +501,10 @@ _:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/e
 # https://w3id.org/def/easytv#WrittenLinguisticExpression
 <https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/easytv#LinguisticExpression> .
-<https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#hasRealization> .
-_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/easytv#Video> .
+<https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#hasRealization> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/easytv#Video> .
 <https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Written linguistic expression"@en .
 # 
 # 
@@ -504,5 +519,5 @@ _:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/e
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
-_:genid15 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
