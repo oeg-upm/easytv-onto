@@ -11,6 +11,16 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lemon-model.net/lemon#entry"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -19,7 +29,7 @@
     "@id" : "http://lemon-model.net/lemon#language"
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -29,22 +39,13 @@
     "@id" : "https://w3id.org/def/easytv#decomposition"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://lemon-model.net/lemon#language"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/easytv#hasRealization"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/easytv#Video"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -57,12 +58,34 @@
   } ]
 }, {
   "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/easytv#hasRealization"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/easytv#Video"
+  } ]
+}, {
+  "@id" : "_:genid16",
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/easytv#relates"
+  } ]
+}, {
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -72,7 +95,7 @@
     "@id" : "http://lemon-model.net/lemon#lexicalForm"
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -82,17 +105,17 @@
     "@id" : "http://lemon-model.net/lemon#canonicalForm"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid8"
+      "@id" : "_:genid9"
     }, {
-      "@id" : "_:genid6"
+      "@id" : "_:genid7"
     } ]
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -102,16 +125,6 @@
     "@id" : "http://lemon-model.net/lemon#reference"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lemon-model.net/lemon#subsense"
-  } ]
-}, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
@@ -119,7 +132,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://lemon-model.net/lemon#entry"
+    "@id" : "http://lemon-model.net/lemon#subsense"
   } ]
 }, {
   "@id" : "http://babelnet.org/model/babelnet#BabelGloss",
@@ -181,7 +194,10 @@
   } ]
 }, {
   "@id" : "http://lemon-model.net/lemon#LemonElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
 }, {
   "@id" : "http://lemon-model.net/lemon#LexicalEntry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -211,9 +227,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://lemon-model.net/lemon#LemonElement"
   }, {
-    "@id" : "_:genid2"
-  }, {
     "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://lemon-model.net/lemon#LexicalSense"
@@ -246,7 +262,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://lemon-model.net/lemon#LemonElement"
   }, {
-    "@id" : "_:genid4"
+    "@id" : "_:genid5"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://lemon-model.net/lemon#Lexicon"
@@ -280,9 +296,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://lemon-model.net/lemon#LemonElement"
   }, {
-    "@id" : "_:genid9"
-  }, {
     "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "http://lemon-model.net/lemon#Phrase",
@@ -313,7 +329,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://lemon-model.net/lemon#LexicalEntry"
   }, {
-    "@id" : "_:genid11"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "http://lemon-model.net/lemon#PropertyValue",
@@ -856,7 +872,7 @@
     "@value" : "This ontology represents the core terms to annotate sign language videos with multilingual information."
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.3"
+    "@value" : "0.0.4"
   } ]
 }, {
   "@id" : "https://w3id.org/def/easytv#LinguisticExpression",
@@ -866,7 +882,7 @@
     "@value" : "Linguistic expression"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid12"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem",
@@ -899,7 +915,14 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#Translation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"
   } ]
 }, {
   "@id" : "https://w3id.org/def/easytv#Video",
@@ -920,7 +943,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "https://w3id.org/def/easytv#decomposition",
@@ -980,6 +1003,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/easytv#relates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/easytv#Translation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
   } ]
 }, {
   "@id" : "https://w3id.org/def/easytv#signForm",

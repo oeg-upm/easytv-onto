@@ -13,6 +13,11 @@ This section provides details for each class and property defined by easyTV core
          </a>
       </li>
       <li>
+         <a href="#http://lemon-model.net/lemon#LemonElement" title="http://lemon-model.net/lemon#LemonElement">
+            <span>lemon element</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
       </li>
       <li>
@@ -63,6 +68,11 @@ This section provides details for each class and property defined by easyTV core
             title="https://w3id.org/def/easytv#SignedLinguisticExpression">Signed linguistic expression</a>
       </li>
       <li>
+         <a href="#Translation" title="https://w3id.org/def/easytv#Translation">
+            <span>translation</span>
+         </a>
+      </li>
+      <li>
          <a href="#VideoFrame" title="https://w3id.org/def/easytv#VideoFrame">
             <span>video frame</span>
          </a>
@@ -85,7 +95,7 @@ This section provides details for each class and property defined by easyTV core
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <a href="#http://lemon-model.net/lemon#LemonElement" title="http://lemon-model.net/lemon#LemonElement">lemon element</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -142,6 +152,26 @@ This section provides details for each class and property defined by easyTV core
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://lemon-model.net/lemon#LemonElement">
+      <h3>lemon element<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lemon-model.net/lemon#LemonElement</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://lemon-model.net/lemon#Form" title="http://lemon-model.net/lemon#Form">Form</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalEntry" title="http://lemon-model.net/lemon#LexicalEntry">Lexical entry</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#LexicalSense" title="http://lemon-model.net/lemon#LexicalSense">Lexical sense</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://lemon-model.net/lemon#Lexicon" title="http://lemon-model.net/lemon#Lexicon">Lexicon</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://lemon-model.net/lemon#LexicalEntry">
       <h3>Lexical entry<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -155,7 +185,7 @@ This section provides details for each class and property defined by easyTV core
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <a href="#http://lemon-model.net/lemon#LemonElement" title="http://lemon-model.net/lemon#LemonElement">lemon element</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -199,7 +229,7 @@ This section provides details for each class and property defined by easyTV core
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <a href="#http://lemon-model.net/lemon#LemonElement" title="http://lemon-model.net/lemon#LemonElement">lemon element</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -236,7 +266,7 @@ This section provides details for each class and property defined by easyTV core
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://lemon-model.net/lemon#LemonElement">lemon element</span>
+            <a href="#http://lemon-model.net/lemon#LemonElement" title="http://lemon-model.net/lemon#LemonElement">lemon element</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -274,6 +304,11 @@ This section provides details for each class and property defined by easyTV core
          <dt>is in domain of</dt>
          <dd>
             <a href="#decomposition" title="https://w3id.org/def/easytv#decomposition">Decomposition</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relates" title="https://w3id.org/def/easytv#relates">relates</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -484,6 +519,24 @@ This section provides details for each class and property defined by easyTV core
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Translation">
+      <h3>translation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#Translation</p>
+      <div class="comment">
+         <span class="markdown">Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#relates" title="https://w3id.org/def/easytv#relates">relates</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="VideoFrame">
       <h3>video frame<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -586,6 +639,11 @@ This section provides details for each class and property defined by easyTV core
       </li>
       <li>
          <a href="#http://lemon-model.net/lemon#isReferenceOf" title="http://lemon-model.net/lemon#isReferenceOf">Reference of</a>
+      </li>
+      <li>
+         <a href="#relates" title="https://w3id.org/def/easytv#relates">
+            <span>relates</span>
+         </a>
       </li>
       <li>
          <a href="#http://lemon-model.net/lemon#sense" title="http://lemon-model.net/lemon#sense">Sense</a>
@@ -1054,6 +1112,31 @@ This section provides details for each class and property defined by easyTV core
             <dd>
                <a href="#http://lemon-model.net/lemon#reference" title="http://lemon-model.net/lemon#reference">Reference</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relates">
+      <h3>relates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/easytv#relates</p>
+      <div class="comment">
+         <span class="markdown">Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Translation" title="https://w3id.org/def/easytv#Translation">translation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#LinguisticExpression" title="https://w3id.org/def/easytv#LinguisticExpression">Linguistic expression</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
