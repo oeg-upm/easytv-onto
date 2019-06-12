@@ -11,10 +11,11 @@
                                 <http://purl.org/dc/elements/1.1/title> "easyTV core model"@en ;
                                 <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                <http://purl.org/dc/terms/modified> "2019-06-12" ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.4" .
+                                owl:versionInfo "0.0.5" .
 
 #################################################################
 #    Annotation properties
@@ -48,6 +49,10 @@
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
@@ -64,10 +69,6 @@
 owl:cardinality rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
@@ -81,7 +82,7 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                 rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                 rdfs:range <http://babelnet.org/model/babelnet#BabelGloss> ;
                                                 rdfs:comment "Points to the synset definition."@en ;
-                                                rdfs:label "Synset definition"@en .
+                                                rdfs:label "synset definition"@en .
 
 
 ###  http://lemon-model.net/lemon#canonicalForm
@@ -246,62 +247,70 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                           rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 
 
-###  https://w3id.org/def/easytv#decomposition
-:decomposition rdf:type owl:ObjectProperty ;
-               rdfs:domain :LinguisticExpression ;
-               rdfs:range :LinguisticExpressionItem ;
-               rdfs:comment "Denotes a component of a linguisti expression"@en ;
-               rdfs:label "Decomposition"@en .
+###  http://www.semanticweb.org/owl/owlapi/turtle#decomposition
+<http://www.semanticweb.org/owl/owlapi/turtle#decomposition> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression> ;
+                                                             rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem> ;
+                                                             rdfs:comment "Denotes a component of a linguisti expression"@en ;
+                                                             rdfs:label "decomposition"@en .
 
 
-###  https://w3id.org/def/easytv#hasForm
-:hasForm rdf:type owl:ObjectProperty ;
-         rdfs:domain :LinguisticExpressionItem ;
-         rdfs:range <http://lemon-model.net/lemon#Form> .
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasForm
+<http://www.semanticweb.org/owl/owlapi/turtle#hasForm> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem> ;
+                                                       rdfs:range <http://lemon-model.net/lemon#Form> ;
+                                                       rdfs:label "has form"@en .
 
 
-###  https://w3id.org/def/easytv#hasRealization
-:hasRealization rdf:type owl:ObjectProperty .
+###  http://www.semanticweb.org/owl/owlapi/turtle#hasRealization
+<http://www.semanticweb.org/owl/owlapi/turtle#hasRealization> rdf:type owl:ObjectProperty ;
+                                                              rdfs:label "has realization"@en .
 
 
-###  https://w3id.org/def/easytv#isComponentOf
-:isComponentOf rdf:type owl:ObjectProperty ;
-               owl:inverseOf :isComponsedBy ;
-               rdfs:domain :VideoFrame ;
-               rdfs:range :Video .
+###  http://www.semanticweb.org/owl/owlapi/turtle#isComponentOf
+<http://www.semanticweb.org/owl/owlapi/turtle#isComponentOf> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <http://www.semanticweb.org/owl/owlapi/turtle#isComponsedBy> ;
+                                                             rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#VideoFrame> ;
+                                                             rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Video> ;
+                                                             rdfs:label "is component of"@en .
 
 
-###  https://w3id.org/def/easytv#isComponsedBy
-:isComponsedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :Video ;
-               rdfs:range :VideoFrame .
+###  http://www.semanticweb.org/owl/owlapi/turtle#isComponsedBy
+<http://www.semanticweb.org/owl/owlapi/turtle#isComponsedBy> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Video> ;
+                                                             rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#VideoFrame> ;
+                                                             rdfs:label "is composed by"@en .
 
 
-###  https://w3id.org/def/easytv#nextItem
-:nextItem rdf:type owl:ObjectProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:domain :LinguisticExpressionItem ;
-          rdfs:range :LinguisticExpressionItem .
+###  http://www.semanticweb.org/owl/owlapi/turtle#nextItem
+<http://www.semanticweb.org/owl/owlapi/turtle#nextItem> rdf:type owl:ObjectProperty ,
+                                                                 owl:FunctionalProperty ;
+                                                        rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem> ;
+                                                        rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem> ;
+                                                        rdfs:label "next item"@en .
 
 
-###  https://w3id.org/def/easytv#relates
-:relates rdf:type owl:ObjectProperty ;
-         rdfs:domain :Translation ;
-         rdfs:range :LinguisticExpression ;
-         rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+###  http://www.semanticweb.org/owl/owlapi/turtle#relates
+<http://www.semanticweb.org/owl/owlapi/turtle#relates> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Translation> ;
+                                                       rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression> ;
+                                                       rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en ;
+                                                       rdfs:label "relates"@en .
 
 
-###  https://w3id.org/def/easytv#signForm
-:signForm rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
-          rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
-          rdfs:range :SignedForm .
+###  http://www.semanticweb.org/owl/owlapi/turtle#signForm
+<http://www.semanticweb.org/owl/owlapi/turtle#signForm> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
+                                                        rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
+                                                        rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#SignedForm> ;
+                                                        rdfs:label "sign form"@en .
 
 
-###  https://w3id.org/def/easytv#signedRep
-:signedRep rdf:type owl:ObjectProperty ;
-           rdfs:domain :SignedForm ;
-           rdfs:range :Video .
+###  http://www.semanticweb.org/owl/owlapi/turtle#signedRep
+<http://www.semanticweb.org/owl/owlapi/turtle#signedRep> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#SignedForm> ;
+                                                         rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#Video> ;
+                                                         rdfs:label "signed representation"@en .
 
 
 #################################################################
@@ -344,8 +353,24 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                      "Written representation"@en .
 
 
-###  https://w3id.org/def/easytv#url
-:url rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/owl/owlapi/turtle#confidence
+<http://www.semanticweb.org/owl/owlapi/turtle#confidence> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Translation> ;
+                                                          rdfs:range xsd:float ;
+                                                          rdfs:comment "Percentage of correctness of a translation."@en ;
+                                                          rdfs:label "confidence"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#expertSuggestion
+<http://www.semanticweb.org/owl/owlapi/turtle#expertSuggestion> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/owl/owlapi/turtle#Translation> ;
+                                                                rdfs:range xsd:boolean ;
+                                                                rdfs:comment "Boolean property that indicates (if true) whether the translation has been suggested by an expert."@en ;
+                                                                rdfs:label "expert suggestion"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#url
+<http://www.semanticweb.org/owl/owlapi/turtle#url> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -378,9 +403,9 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 ###  http://lemon-model.net/lemon#LemonElement
 <http://lemon-model.net/lemon#LemonElement> rdf:type owl:Class ;
                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :relates ;
+                                                              owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#relates> ;
                                                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                              owl:onClass :LinguisticExpression
+                                                              owl:onClass <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression>
                                                             ] .
 
 
@@ -453,7 +478,7 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 <http://lemon-model.net/lemon#Phrase> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty :decomposition ;
+                                                        owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#decomposition> ;
                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
                                                       ] ;
                                       rdfs:comment "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en ;
@@ -499,74 +524,63 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                      rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 
 
+###  http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression
+<http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://lemon-model.net/lemon#language> ;
+                                                                                      owl:someValuesFrom rdfs:Literal
+                                                                                    ] ;
+                                                                    rdfs:label "Linguistic expression"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem
+<http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem> rdf:type owl:Class ;
+                                                                        rdfs:comment "Items in a linguistic expression"@en ;
+                                                                        rdfs:label "Linguistic expression item"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#SignedForm
+<http://www.semanticweb.org/owl/owlapi/turtle#SignedForm> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://lemon-model.net/lemon#Form> ;
+                                                          rdfs:label "Signed form"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#SignedLinguisticExpression
+<http://www.semanticweb.org/owl/owlapi/turtle#SignedLinguisticExpression> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression> ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#hasRealization> ;
+                                                                                            owl:someValuesFrom <http://www.semanticweb.org/owl/owlapi/turtle#Video>
+                                                                                          ] ;
+                                                                          rdfs:label "Signed linguistic expression"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Translation
+<http://www.semanticweb.org/owl/owlapi/turtle#Translation> rdf:type owl:Class ;
+                                                           rdfs:comment "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#Video
+<http://www.semanticweb.org/owl/owlapi/turtle#Video> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#VideoFrame
+<http://www.semanticweb.org/owl/owlapi/turtle#VideoFrame> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#Video> .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#WrittenLinguisticExpression
+<http://www.semanticweb.org/owl/owlapi/turtle#WrittenLinguisticExpression> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression> ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://www.semanticweb.org/owl/owlapi/turtle#hasRealization> ;
+                                                                                             owl:someValuesFrom <http://www.semanticweb.org/owl/owlapi/turtle#Video>
+                                                                                           ] ;
+                                                                           rdfs:label "Written linguistic expression"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
-
-###  https://w3id.org/def/easytv#LinguisticExpression
-:LinguisticExpression rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty <http://lemon-model.net/lemon#language> ;
-                                        owl:someValuesFrom rdfs:Literal
-                                      ] ;
-                      rdfs:label "Linguistic expression"@en .
-
-
-###  https://w3id.org/def/easytv#LinguisticExpressionItem
-:LinguisticExpressionItem rdf:type owl:Class ;
-                          rdfs:comment "Items in a linguistic expression"@en ;
-                          rdfs:label "Linguistic expression item"@en .
-
-
-###  https://w3id.org/def/easytv#SignedForm
-:SignedForm rdf:type owl:Class ;
-            rdfs:subClassOf <http://lemon-model.net/lemon#Form> ;
-            rdfs:label "Signed form"@en .
-
-
-###  https://w3id.org/def/easytv#SignedLinguisticExpression
-:SignedLinguisticExpression rdf:type owl:Class ;
-                            rdfs:subClassOf :LinguisticExpression ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasRealization ;
-                                              owl:someValuesFrom :Video
-                                            ] ;
-                            rdfs:label "Signed linguistic expression"@en .
-
-
-###  https://w3id.org/def/easytv#Translation
-:Translation rdf:type owl:Class ;
-             rdfs:comment "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
-
-
-###  https://w3id.org/def/easytv#Video
-:Video rdf:type owl:Class .
-
-
-###  https://w3id.org/def/easytv#VideoFrame
-:VideoFrame rdf:type owl:Class ;
-            rdfs:subClassOf :Video .
-
-
-###  https://w3id.org/def/easytv#WrittenLinguisticExpression
-:WrittenLinguisticExpression rdf:type owl:Class ;
-                             rdfs:subClassOf :LinguisticExpression ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty :hasRealization ;
-                                               owl:someValuesFrom :Video
-                                             ] ;
-                             rdfs:label "Written linguistic expression"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual .
-
-
-[ owl:cardinality "1"^^xsd:nonNegativeInteger
-] .
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

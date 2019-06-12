@@ -1,14 +1,15 @@
 {
   "@context" : {
+    "confidence" : {
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#confidence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "entry" : {
       "@id" : "http://lemon-model.net/lemon#entry",
       "@type" : "@id"
     },
     "BabelGloss" : {
       "@id" : "http://babelnet.org/model/babelnet#BabelGloss"
-    },
-    "term_status" : {
-      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -21,7 +22,7 @@
       "@id" : "http://purl.org/dc/terms/license"
     },
     "url" : {
-      "@id" : "https://w3id.org/def/easytv#url"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#url"
     },
     "LexicalSense" : {
       "@id" : "http://lemon-model.net/lemon#LexicalSense"
@@ -31,20 +32,20 @@
       "@type" : "@id"
     },
     "Translation" : {
-      "@id" : "https://w3id.org/def/easytv#Translation"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#Translation"
     },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
     "Video" : {
-      "@id" : "https://w3id.org/def/easytv#Video"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#Video"
     },
     "canonicalForm" : {
       "@id" : "http://lemon-model.net/lemon#canonicalForm",
       "@type" : "@id"
     },
     "decomposition" : {
-      "@id" : "https://w3id.org/def/easytv#decomposition",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#decomposition",
       "@type" : "@id"
     },
     "Number" : {
@@ -57,7 +58,7 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "isComponsedBy" : {
-      "@id" : "https://w3id.org/def/easytv#isComponsedBy",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#isComponsedBy",
       "@type" : "@id"
     },
     "Concept" : {
@@ -79,13 +80,13 @@
       "@type" : "@id"
     },
     "LinguisticExpressionItem" : {
-      "@id" : "https://w3id.org/def/easytv#LinguisticExpressionItem"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpressionItem"
     },
     "Gender" : {
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Gender"
     },
     "VideoFrame" : {
-      "@id" : "https://w3id.org/def/easytv#VideoFrame"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#VideoFrame"
     },
     "Person" : {
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Person"
@@ -127,7 +128,7 @@
       "@type" : "@id"
     },
     "isComponentOf" : {
-      "@id" : "https://w3id.org/def/easytv#isComponentOf",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#isComponentOf",
       "@type" : "@id"
     },
     "LexicalEntry" : {
@@ -138,29 +139,33 @@
       "@type" : "@id"
     },
     "hasForm" : {
-      "@id" : "https://w3id.org/def/easytv#hasForm",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#hasForm",
       "@type" : "@id"
     },
     "signForm" : {
-      "@id" : "https://w3id.org/def/easytv#signForm",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#signForm",
       "@type" : "@id"
     },
     "Form" : {
       "@id" : "http://lemon-model.net/lemon#Form"
     },
     "SignedLinguisticExpression" : {
-      "@id" : "https://w3id.org/def/easytv#SignedLinguisticExpression"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#SignedLinguisticExpression"
     },
     "signedRep" : {
-      "@id" : "https://w3id.org/def/easytv#signedRep",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#signedRep",
       "@type" : "@id"
     },
     "SignedForm" : {
-      "@id" : "https://w3id.org/def/easytv#SignedForm"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#SignedForm"
     },
     "number" : {
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#number",
       "@type" : "@id"
+    },
+    "expertSuggestion" : {
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#expertSuggestion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
@@ -170,7 +175,7 @@
       "@type" : "@id"
     },
     "LinguisticExpression" : {
-      "@id" : "https://w3id.org/def/easytv#LinguisticExpression"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#LinguisticExpression"
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -184,7 +189,7 @@
       "@type" : "@id"
     },
     "relates" : {
-      "@id" : "https://w3id.org/def/easytv#relates",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#relates",
       "@type" : "@id"
     },
     "title" : {
@@ -199,8 +204,11 @@
     "LemonElement" : {
       "@id" : "http://lemon-model.net/lemon#LemonElement"
     },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
     "hasRealization" : {
-      "@id" : "https://w3id.org/def/easytv#hasRealization",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#hasRealization",
       "@type" : "@id"
     },
     "MorphosyntacticProperty" : {
@@ -224,11 +232,11 @@
       "@id" : "http://purl.org/dc/terms/contributor"
     },
     "nextItem" : {
-      "@id" : "https://w3id.org/def/easytv#nextItem",
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#nextItem",
       "@type" : "@id"
     },
     "WrittenLinguisticExpression" : {
-      "@id" : "https://w3id.org/def/easytv#WrittenLinguisticExpression"
+      "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#WrittenLinguisticExpression"
     },
     "translation" : {
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#translation",
