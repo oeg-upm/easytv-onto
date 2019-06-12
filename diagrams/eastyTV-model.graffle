@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2019-06-12 13:22:23 +0000</string>
+	<string>2019-06-12 13:52:08 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -1119,7 +1119,7 @@ rdfs:label :: }</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-lexinfo:person}</string>
+lexinfo:tense}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -3990,7 +3990,7 @@ lexinfo:gender}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{307.89484609869407, 391.98192880537641}, {110.02219707499626, 14.40000057220459}}</string>
+					<string>{{307.89484609869407, 391.98192906899675}, {110.02219707499626, 14.40000057220459}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -4110,7 +4110,7 @@ lexinfo:gender}</string>
 						<key>ID</key>
 						<integer>42767</integer>
 						<key>Position</key>
-						<real>0.31638791976833408</real>
+						<real>0.31638792157173157</real>
 					</dict>
 					<key>ID</key>
 					<integer>42998</integer>
@@ -4123,7 +4123,7 @@ lexinfo:gender}</string>
 					<key>Points</key>
 					<array>
 						<string>{490.80594463619218, 382.40625}</string>
-						<string>{234.85999588191507, 420}</string>
+						<string>{234.85999588191507, 420.00000028071543}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5462,7 +5462,7 @@ lemon:writtenRep :: xsd:string}</string>
 						<key>ID</key>
 						<integer>42785</integer>
 						<key>Position</key>
-						<real>0.32865057667866115</real>
+						<real>0.32865056395530701</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -6793,7 +6793,7 @@ etv:SignedForm}</string>
 						<key>ID</key>
 						<integer>42767</integer>
 						<key>Position</key>
-						<real>0.13845424565024214</real>
+						<real>0.13845424354076385</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -39846,7 +39846,7 @@ etv:Video}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{802.7248391666302, 137.38684150530597}, {140.91808993567608, 14.40000057220459}}</string>
+					<string>{{802.16805689826833, 137.28830327254778}, {140.91808993567608, 14.40000057220459}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
