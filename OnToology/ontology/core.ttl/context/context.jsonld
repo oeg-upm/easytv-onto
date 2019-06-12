@@ -1,14 +1,15 @@
 {
   "@context" : {
+    "confidence" : {
+      "@id" : "https://w3id.org/def/easytv#confidence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "entry" : {
       "@id" : "http://lemon-model.net/lemon#entry",
       "@type" : "@id"
     },
     "BabelGloss" : {
       "@id" : "http://babelnet.org/model/babelnet#BabelGloss"
-    },
-    "term_status" : {
-      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -162,6 +163,10 @@
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#number",
       "@type" : "@id"
     },
+    "expertSuggestion" : {
+      "@id" : "https://w3id.org/def/easytv#expertSuggestion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
@@ -198,6 +203,9 @@
     },
     "LemonElement" : {
       "@id" : "http://lemon-model.net/lemon#LemonElement"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
     },
     "hasRealization" : {
       "@id" : "https://w3id.org/def/easytv#hasRealization",
