@@ -25,10 +25,11 @@
                                 dc:title "easyTV core model"@en ;
                                 dcterms:creator <http://purl.org/net/mpoveda> ;
                                 dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                dcterms:modified "2019-06-12" ;
                                 vann:preferredNamespacePrefix "easytv" ;
                                 vann:preferredNamespaceUri "https://w3id.org/def/easytv" ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.4" .
+                                owl:versionInfo "0.0.5" .
 
 #################################################################
 #    Annotation properties
@@ -60,6 +61,10 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -356,6 +361,22 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                                      "Schriftelijke voorstelling"@nl ,
                                                      "Schriftliche Darstellung"@de ,
                                                      "Written representation"@en .
+
+
+###  https://w3id.org/def/easytv#confidence
+:confidence rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Translation ;
+            rdfs:range xsd:float ;
+            rdfs:comment "Percentage of correctness of a translation."@en ;
+            rdfs:label "Confidence"@en .
+
+
+###  https://w3id.org/def/easytv#expertSuggestion
+:expertSuggestion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Translation ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Boolean property that indicates (if true) whether the translation has been suggested by an expert."@en ;
+                  rdfs:label "expert suggestion"@en .
 
 
 ###  https://w3id.org/def/easytv#url
