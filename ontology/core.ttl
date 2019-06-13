@@ -1,23 +1,13 @@
 @prefix : <https://w3id.org/def/easytv#> .
-# New Change
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ssn: <http://www.w3.org/ns/ssn/> .`
-@prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix om18: <http://www.wurvoc.org/vocabularies/om-1.8/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix saref: <https://w3id.org/saref#> .
-@prefix s4bldg: <https://w3id.org/def/saref4bldg#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
 @base <https://w3id.org/def/easytv#> .
 
 <https://w3id.org/def/easytv#> rdf:type owl:Ontology ;
@@ -25,10 +15,11 @@
                                 dc:title "easyTV core model"@en ;
                                 dcterms:creator <http://purl.org/net/mpoveda> ;
                                 dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                dcterms:modified "2019-06-12" ;
                                 vann:preferredNamespacePrefix "easytv" ;
                                 vann:preferredNamespaceUri "https://w3id.org/def/easytv" ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.4" .
+                                owl:versionInfo "0.0.5" .
 
 #################################################################
 #    Annotation properties
@@ -62,6 +53,10 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
@@ -78,10 +73,6 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 owl:cardinality rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-vs:term_status rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
@@ -95,7 +86,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                                 rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                 rdfs:range <http://babelnet.org/model/babelnet#BabelGloss> ;
                                                 rdfs:comment "Points to the synset definition."@en ;
-                                                rdfs:label "Synset definition"@en .
+                                                rdfs:label "synset definition"@en .
 
 
 ###  http://lemon-model.net/lemon#canonicalForm
@@ -265,57 +256,65 @@ vs:term_status rdf:type owl:AnnotationProperty .
                rdfs:domain :LinguisticExpression ;
                rdfs:range :LinguisticExpressionItem ;
                rdfs:comment "Denotes a component of a linguisti expression"@en ;
-               rdfs:label "Decomposition"@en .
+               rdfs:label "decomposition"@en .
 
 
 ###  https://w3id.org/def/easytv#hasForm
 :hasForm rdf:type owl:ObjectProperty ;
          rdfs:domain :LinguisticExpressionItem ;
-         rdfs:range <http://lemon-model.net/lemon#Form> .
+         rdfs:range <http://lemon-model.net/lemon#Form> ;
+         rdfs:label "has form"@en .
 
 
 ###  https://w3id.org/def/easytv#hasRealization
-:hasRealization rdf:type owl:ObjectProperty .
+:hasRealization rdf:type owl:ObjectProperty ;
+                rdfs:label "has realization"@en .
 
 
 ###  https://w3id.org/def/easytv#isComponentOf
 :isComponentOf rdf:type owl:ObjectProperty ;
                owl:inverseOf :isComponsedBy ;
                rdfs:domain :VideoFrame ;
-               rdfs:range :Video .
+               rdfs:range :Video ;
+               rdfs:label "is component of"@en .
 
 
 ###  https://w3id.org/def/easytv#isComponsedBy
 :isComponsedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Video ;
-               rdfs:range :VideoFrame .
+               rdfs:range :VideoFrame ;
+               rdfs:label "is composed by"@en .
 
 
 ###  https://w3id.org/def/easytv#nextItem
 :nextItem rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
           rdfs:domain :LinguisticExpressionItem ;
-          rdfs:range :LinguisticExpressionItem .
+          rdfs:range :LinguisticExpressionItem ;
+          rdfs:label "next item"@en .
 
 
 ###  https://w3id.org/def/easytv#relates
 :relates rdf:type owl:ObjectProperty ;
          rdfs:domain :Translation ;
          rdfs:range :LinguisticExpression ;
-         rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+         rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en ;
+         rdfs:label "relates"@en .
 
 
 ###  https://w3id.org/def/easytv#signForm
 :signForm rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
           rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
-          rdfs:range :SignedForm .
+          rdfs:range :SignedForm ;
+          rdfs:label "sign form"@en .
 
 
 ###  https://w3id.org/def/easytv#signedRep
 :signedRep rdf:type owl:ObjectProperty ;
            rdfs:domain :SignedForm ;
-           rdfs:range :Video .
+           rdfs:range :Video ;
+           rdfs:label "signed representation"@en .
 
 
 #################################################################
@@ -356,6 +355,22 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                                      "Schriftelijke voorstelling"@nl ,
                                                      "Schriftliche Darstellung"@de ,
                                                      "Written representation"@en .
+
+
+###  https://w3id.org/def/easytv#confidence
+:confidence rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Translation ;
+            rdfs:range xsd:float ;
+            rdfs:comment "Percentage of correctness of a translation."@en ;
+            rdfs:label "confidence"@en .
+
+
+###  https://w3id.org/def/easytv#expertSuggestion
+:expertSuggestion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Translation ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Boolean property that indicates (if true) whether the translation has been suggested by an expert."@en ;
+                  rdfs:label "expert suggestion"@en .
 
 
 ###  https://w3id.org/def/easytv#url
@@ -571,16 +586,5 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                              ] ;
                              rdfs:label "Written linguistic expression"@en .
 
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-rdf:nil rdf:type owl:NamedIndividual .
-
-
-[ owl:cardinality "1"^^xsd:nonNegativeInteger
-] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

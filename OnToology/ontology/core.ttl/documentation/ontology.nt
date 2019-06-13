@@ -3,10 +3,11 @@
 <https://w3id.org/def/easytv#> <http://purl.org/dc/elements/1.1/title> "easyTV core model"@en .
 <https://w3id.org/def/easytv#> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .
 <https://w3id.org/def/easytv#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/terms/modified> "2019-06-12" .
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" .
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" .
 <https://w3id.org/def/easytv#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to annotate sign language videos with multilingual information."@en .
-<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.4" .
+<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.5" .
 # 
 # 
 # #################################################################
@@ -37,6 +38,9 @@
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -48,9 +52,6 @@
 # 
 # http://www.w3.org/2002/07/owl#cardinality
 <http://www.w3.org/2002/07/owl#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -69,7 +70,7 @@
 <http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#range> <http://babelnet.org/model/babelnet#BabelGloss> .
 <http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the synset definition."@en .
-<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#label> "Synset definition"@en .
+<http://babelnet.org/model/babelnet#definition> <http://www.w3.org/2000/01/rdf-schema#label> "synset definition"@en .
 # 
 # http://lemon-model.net/lemon#canonicalForm
 <http://lemon-model.net/lemon#canonicalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -221,49 +222,57 @@
 <https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpression> .
 <https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
 <https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a component of a linguisti expression"@en .
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "Decomposition"@en .
+<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "decomposition"@en .
 # 
 # https://w3id.org/def/easytv#hasForm
 <https://w3id.org/def/easytv#hasForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#hasForm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
 <https://w3id.org/def/easytv#hasForm> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#Form> .
+<https://w3id.org/def/easytv#hasForm> <http://www.w3.org/2000/01/rdf-schema#label> "has form"@en .
 # 
 # https://w3id.org/def/easytv#hasRealization
 <https://w3id.org/def/easytv#hasRealization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#hasRealization> <http://www.w3.org/2000/01/rdf-schema#label> "has realization"@en .
 # 
 # https://w3id.org/def/easytv#isComponentOf
 <https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/easytv#isComponsedBy> .
 <https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#VideoFrame> .
 <https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#Video> .
+<https://w3id.org/def/easytv#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is component of"@en .
 # 
 # https://w3id.org/def/easytv#isComponsedBy
 <https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Video> .
 <https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#VideoFrame> .
+<https://w3id.org/def/easytv#isComponsedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is composed by"@en .
 # 
 # https://w3id.org/def/easytv#nextItem
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
 <https://w3id.org/def/easytv#nextItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
+<https://w3id.org/def/easytv#nextItem> <http://www.w3.org/2000/01/rdf-schema#label> "next item"@en .
 # 
 # https://w3id.org/def/easytv#relates
 <https://w3id.org/def/easytv#relates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Translation> .
 <https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpression> .
 <https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+<https://w3id.org/def/easytv#relates> <http://www.w3.org/2000/01/rdf-schema#label> "relates"@en .
 # 
 # https://w3id.org/def/easytv#signForm
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#lexicalForm> .
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalEntry> .
 <https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#SignedForm> .
+<https://w3id.org/def/easytv#signForm> <http://www.w3.org/2000/01/rdf-schema#label> "sign form"@en .
 # 
 # https://w3id.org/def/easytv#signedRep
 <https://w3id.org/def/easytv#signedRep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/easytv#signedRep> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#SignedForm> .
 <https://w3id.org/def/easytv#signedRep> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#Video> .
+<https://w3id.org/def/easytv#signedRep> <http://www.w3.org/2000/01/rdf-schema#label> "signed representation"@en .
 # 
 # 
 # 
@@ -306,6 +315,20 @@
 <http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Schriftelijke voorstelling"@nl .
 <http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Schriftliche Darstellung"@de .
 <http://lemon-model.net/lemon#writtenRep> <http://www.w3.org/2000/01/rdf-schema#label> "Written representation"@en .
+# 
+# https://w3id.org/def/easytv#confidence
+<https://w3id.org/def/easytv#confidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/easytv#confidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Translation> .
+<https://w3id.org/def/easytv#confidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/def/easytv#confidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Percentage of correctness of a translation."@en .
+<https://w3id.org/def/easytv#confidence> <http://www.w3.org/2000/01/rdf-schema#label> "confidence"@en .
+# 
+# https://w3id.org/def/easytv#expertSuggestion
+<https://w3id.org/def/easytv#expertSuggestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/easytv#expertSuggestion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#Translation> .
+<https://w3id.org/def/easytv#expertSuggestion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/easytv#expertSuggestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean property that indicates (if true) whether the translation has been suggested by an expert."@en .
+<https://w3id.org/def/easytv#expertSuggestion> <http://www.w3.org/2000/01/rdf-schema#label> "expert suggestion"@en .
 # 
 # https://w3id.org/def/easytv#url
 <https://w3id.org/def/easytv#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -507,17 +530,4 @@ _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easyt
 _:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/easytv#Video> .
 <https://w3id.org/def/easytv#WrittenLinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Written linguistic expression"@en .
 # 
-# 
-# 
-# #################################################################
-# #
-# #    Individuals
-# #
-# #################################################################
-# 
-# 
-# http://www.w3.org/1999/02/22-rdf-syntax-ns#nil
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
-_:genid16 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
