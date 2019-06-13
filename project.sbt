@@ -27,12 +27,7 @@ scmInfo := Some(ScmInfo(
 
 developers := List(
   Developer(
-    id="rouquett",
-    name="Nicolas F. Rouquette",
-    email="nicolas.f.rouquette@jpl.nasa.gov",
-    url=url("https://gateway.jpl.nasa.gov/personal/rouquett/default.aspx")),
-  Developer(
     id="sherzig",
-    name="Sebastian J. Herzig",
-    email="sebastian.j.herzig@jpl.nasa.gov",
-    url=url("https://gateway.jpl.nasa.gov/personal/sherzig/default.aspx")))
+    name="Hamza Malik",
+    email="hamzamalik94@gmail.com",
+    url=url("https://github.com/mariapoveda/easytv-onto")))
