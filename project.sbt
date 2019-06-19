@@ -1,18 +1,18 @@
 sbtPlugin := false
 
-name := "gov.nasa.jpl.imce.ontologies.workflow"
+name := "easytv-onto"
 
 description := "Workflow for producing derived artifacts from source ontology specifications"
 
 moduleName := name.value
 
-organization := "gov.nasa.jpl.imce"
+organization := "easytv-onto"
 
 organizationName := "JPL-IMCE"
 
-homepage := Some(url(s"https://github.jpl.nasa.gov/imce/${moduleName.value}"))
+homepage := Some(url(s"https://github.com/mariapoveda/${moduleName.value}"))
 
-organizationHomepage := Some(url("https://github.jpl.nasa.gov/imce"))
+organizationHomepage := Some(url("https://github.com/mariapoveda"))
 
 git.remoteRepo := "git@github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.workflow.git"
 
@@ -22,7 +22,7 @@ publishTo := Some(
     s"https://api.bintray.com/content/jpl-imce/${organization.value}/${moduleName.value}/${version.value}")
 
 scmInfo := Some(ScmInfo(
-  browseUrl = url(s"https://github.jpl.nasa.gov/imce/gov.nasa.jpl.imce.ontologies.workflow"),
+  browseUrl = url(s"https://github.com/mariapoveda/easytv-onto"),
   connection = "scm:"+git.remoteRepo.value))
 
 developers := List(
