@@ -1,20 +1,16 @@
 pipeline {
-	agent any
-	stages {
-		stage('---clean---'){
-			steps {
-				sh "mvn clean"
-			}
-		}
-		stage('---test---'){
-			steps {
-				sh "mvn test"
-			}
-		}
-		stage('---package---'){
-			steps {
-				sh "mvn package"
-			}
-		}
-	}
+    agent any
+
+    stages {
+        stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' (1)
+              }
+            }
+            steps {
+                sh 'make publish'
+            }
+        }
+    }
 }
