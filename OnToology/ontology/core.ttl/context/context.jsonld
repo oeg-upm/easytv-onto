@@ -44,10 +44,6 @@
       "@id" : "http://lemon-model.net/lemon#canonicalForm",
       "@type" : "@id"
     },
-    "decomposition" : {
-      "@id" : "https://w3id.org/def/easytv#decomposition",
-      "@type" : "@id"
-    },
     "Number" : {
       "@id" : "http://www.lexinfo.net/ontology/2.0/lexinfo#Number"
     },
@@ -231,6 +227,10 @@
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor"
     },
+    "hasComponent" : {
+      "@id" : "https://w3id.org/def/easytv#hasComponent",
+      "@type" : "@id"
+    },
     "nextItem" : {
       "@id" : "https://w3id.org/def/easytv#nextItem",
       "@type" : "@id"
@@ -244,6 +244,10 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "firstItem" : {
+      "@id" : "https://w3id.org/def/easytv#firstItem",
+      "@type" : "@id"
     }
   }
 }

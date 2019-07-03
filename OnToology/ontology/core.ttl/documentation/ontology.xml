@@ -17,11 +17,11 @@
         <dc:title xml:lang="en">easyTV core model</dc:title>
         <terms:creator rdf:resource="http://purl.org/net/mpoveda"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <terms:modified>2019-06-12</terms:modified>
+        <terms:modified>2019-07-03</terms:modified>
         <vann:preferredNamespacePrefix>easytv</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/easytv</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology represents the core terms to annotate sign language videos with multilingual information.</rdfs:comment>
-        <owl:versionInfo>0.0.5</owl:versionInfo>
+        <owl:versionInfo>0.0.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -379,14 +379,28 @@
     
 
 
-    <!-- https://w3id.org/def/easytv#decomposition -->
+    <!-- https://w3id.org/def/easytv#firstItem -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#decomposition">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#firstItem">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/easytv#hasComponent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
         <rdfs:range rdf:resource="https://w3id.org/def/easytv#LinguisticExpressionItem"/>
-        <rdfs:comment xml:lang="en">Denotes a component of a linguisti expression</rdfs:comment>
-        <rdfs:label xml:lang="en">decomposition</rdfs:label>
+        <rdfs:comment xml:lang="en">Links to the first item of a decomposition for a linguistic expression</rdfs:comment>
+        <rdfs:label xml:lang="en">first item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/easytv#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/easytv#hasComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/def/easytv#LinguisticExpression"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/easytv#LinguisticExpressionItem"/>
+        <rdfs:comment xml:lang="en">Denotes the components of a linguistic expression</rdfs:comment>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -726,7 +740,7 @@
         <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#LexicalEntry"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#decomposition"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/easytv#hasComponent"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
