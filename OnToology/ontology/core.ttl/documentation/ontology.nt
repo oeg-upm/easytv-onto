@@ -3,11 +3,11 @@
 <https://w3id.org/def/easytv#> <http://purl.org/dc/elements/1.1/title> "easyTV core model"@en .
 <https://w3id.org/def/easytv#> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .
 <https://w3id.org/def/easytv#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://w3id.org/def/easytv#> <http://purl.org/dc/terms/modified> "2019-06-12" .
+<https://w3id.org/def/easytv#> <http://purl.org/dc/terms/modified> "2019-07-03" .
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "easytv" .
 <https://w3id.org/def/easytv#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/easytv" .
 <https://w3id.org/def/easytv#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the core terms to annotate sign language videos with multilingual information."@en .
-<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.5" .
+<https://w3id.org/def/easytv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.6" .
 # 
 # 
 # #################################################################
@@ -217,12 +217,21 @@
 <http://www.lexinfo.net/ontology/2.0/lexinfo#translation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#senseRelation> .
 <http://www.lexinfo.net/ontology/2.0/lexinfo#translation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 # 
-# https://w3id.org/def/easytv#decomposition
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpression> .
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a component of a linguisti expression"@en .
-<https://w3id.org/def/easytv#decomposition> <http://www.w3.org/2000/01/rdf-schema#label> "decomposition"@en .
+# https://w3id.org/def/easytv#firstItem
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/easytv#hasComponent> .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpression> .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to the first item of a decomposition for a linguistic expression"@en .
+<https://w3id.org/def/easytv#firstItem> <http://www.w3.org/2000/01/rdf-schema#label> "first item"@en .
+# 
+# https://w3id.org/def/easytv#hasComponent
+<https://w3id.org/def/easytv#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/easytv#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/easytv#LinguisticExpression> .
+<https://w3id.org/def/easytv#hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/easytv#LinguisticExpressionItem> .
+<https://w3id.org/def/easytv#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the components of a linguistic expression"@en .
+<https://w3id.org/def/easytv#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
 # 
 # https://w3id.org/def/easytv#hasForm
 <https://w3id.org/def/easytv#hasForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -442,7 +451,7 @@ _:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LexicalEntry> .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#decomposition> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/easytv#hasComponent> .
 _:genid12 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#comment> "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en .
 <http://lemon-model.net/lemon#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@de .
