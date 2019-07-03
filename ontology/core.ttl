@@ -15,11 +15,11 @@
                                 dc:title "easyTV core model"@en ;
                                 dcterms:creator <http://purl.org/net/mpoveda> ;
                                 dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                dcterms:modified "2019-06-12" ;
+                                dcterms:modified "2019-07-03" ;
                                 vann:preferredNamespacePrefix "easytv" ;
                                 vann:preferredNamespaceUri "https://w3id.org/def/easytv" ;
                                 rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
-                                owl:versionInfo "0.0.5" .
+                                owl:versionInfo "0.0.6" .
 
 #################################################################
 #    Annotation properties
@@ -251,12 +251,22 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                           rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 
 
-###  https://w3id.org/def/easytv#decomposition
-:decomposition rdf:type owl:ObjectProperty ;
-               rdfs:domain :LinguisticExpression ;
-               rdfs:range :LinguisticExpressionItem ;
-               rdfs:comment "Denotes a component of a linguisti expression"@en ;
-               rdfs:label "decomposition"@en .
+###  https://w3id.org/def/easytv#firstItem
+:firstItem rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasComponent ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :LinguisticExpression ;
+           rdfs:range :LinguisticExpressionItem ;
+           rdfs:comment "Links to the first item of a decomposition for a linguistic expression"@en ;
+           rdfs:label "first item"@en .
+
+
+###  https://w3id.org/def/easytv#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :LinguisticExpression ;
+              rdfs:range :LinguisticExpressionItem ;
+              rdfs:comment "Denotes the components of a linguistic expression"@en ;
+              rdfs:label "has component"@en .
 
 
 ###  https://w3id.org/def/easytv#hasForm
@@ -482,7 +492,7 @@ owl:cardinality rdf:type owl:AnnotationProperty .
 <http://lemon-model.net/lemon#Phrase> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty :decomposition ;
+                                                        owl:onProperty :hasComponent ;
                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
                                                       ] ;
                                       rdfs:comment "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en ;
