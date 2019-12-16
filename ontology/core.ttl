@@ -251,6 +251,13 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                                                           rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 
 
+###  https://w3id.org/def/easytv#firstFrame
+:firstFrame rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :isComponsedBy ;
+            rdfs:domain :Video ;
+            rdfs:range :VideoFrame .
+
+
 ###  https://w3id.org/def/easytv#firstItem
 :firstItem rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasComponent ;
@@ -294,6 +301,12 @@ owl:cardinality rdf:type owl:AnnotationProperty .
                rdfs:domain :Video ;
                rdfs:range :VideoFrame ;
                rdfs:label "is composed by"@en .
+
+
+###  https://w3id.org/def/easytv#nextFrame
+:nextFrame rdf:type owl:ObjectProperty ;
+           rdfs:domain :VideoFrame ;
+           rdfs:range :VideoFrame .
 
 
 ###  https://w3id.org/def/easytv#nextItem
