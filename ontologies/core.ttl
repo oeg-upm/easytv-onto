@@ -1,0 +1,613 @@
+@prefix : <https://w3id.org/def/easytv#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/def/easytv#> .
+
+<https://w3id.org/def/easytv#> rdf:type owl:Ontology ;
+                                dc:publisher <http://www.oeg-upm.net/> ;
+                                dc:title "easyTV core model"@en ;
+                                dcterms:creator <http://purl.org/net/mpoveda> ;
+                                dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                dcterms:modified "2019-07-03" ;
+                                vann:preferredNamespacePrefix "easytv" ;
+                                vann:preferredNamespaceUri "https://w3id.org/def/easytv" ;
+                                rdfs:comment "This ontology represents the core terms to annotate sign language videos with multilingual information."@en ;
+                                owl:versionInfo "0.0.6" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/#creator
+<http://purl.org/dc/elements/1.1/#creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.isocat.org/ns/dcr.rdf#datcat
+<http://www.isocat.org/ns/dcr.rdf#datcat> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://babelnet.org/model/babelnet#definition
+<http://babelnet.org/model/babelnet#definition> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                rdfs:range <http://babelnet.org/model/babelnet#BabelGloss> ;
+                                                rdfs:comment "Points to the synset definition."@en ;
+                                                rdfs:label "synset definition"@en .
+
+
+###  http://lemon-model.net/lemon#canonicalForm
+<http://lemon-model.net/lemon#canonicalForm> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
+                                             rdf:type owl:FunctionalProperty ;
+                                             rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
+                                             rdfs:range <http://lemon-model.net/lemon#Form> ;
+                                             rdfs:comment "The canonical (\"dictionary\") form of the lexical entry. This can be used to indicate the \"lemma\" form of a lexical entry"@en ;
+                                             rdfs:label "Canonical form"@en ,
+                                                        "Canonieke vorm"@nl ,
+                                                        "Forma canónica"@es ,
+                                                        "Forme canonique"@fr ,
+                                                        "Kanonische Form"@de .
+
+
+###  http://lemon-model.net/lemon#element
+<http://lemon-model.net/lemon#element> rdf:type owl:ObjectProperty ,
+                                                owl:FunctionalProperty ;
+                                       rdfs:range <http://lemon-model.net/lemon#LexicalEntry> ;
+                                       rdfs:comment "Denotes the lexical entry represented by the component"@en ;
+                                       rdfs:label "element"@en .
+
+
+###  http://lemon-model.net/lemon#entry
+<http://lemon-model.net/lemon#entry> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://lemon-model.net/lemon#Lexicon> ;
+                                     rdfs:range <http://lemon-model.net/lemon#LexicalEntry> ;
+                                     rdfs:comment "Indicates an entry in a lexicon"@en ;
+                                     rdfs:label "Eintrag"@de ,
+                                                "Entrada"@es ,
+                                                "Entry"@en ,
+                                                "Entrée"@fr ,
+                                                "Item"@nl .
+
+
+###  http://lemon-model.net/lemon#isReferenceOf
+<http://lemon-model.net/lemon#isReferenceOf> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://lemon-model.net/lemon#reference> ;
+                                             rdfs:range <http://lemon-model.net/lemon#LexicalSense> ;
+                                             rdfs:comment "Indicate that a reference has a given sense"@en ;
+                                             rdfs:label "Reference of"@en ,
+                                                        "Referencia de"@es ,
+                                                        "Referentie van"@nl ,
+                                                        "Referenz von"@de ,
+                                                        "Référence de"@fr .
+
+
+###  http://lemon-model.net/lemon#isSenseOf
+<http://lemon-model.net/lemon#isSenseOf> rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf <http://lemon-model.net/lemon#sense> ;
+                                         rdfs:domain <http://lemon-model.net/lemon#LexicalSense> ;
+                                         rdfs:range <http://lemon-model.net/lemon#LexicalEntry> ;
+                                         rdfs:comment "Indicate that a sense is realised by the given lexical entry"@en ;
+                                         rdfs:label "Acepción de"@es ,
+                                                    "Sense of"@en ,
+                                                    "Signfication de"@fr ,
+                                                    "Sinn von"@de ,
+                                                    "Zin van"@nl .
+
+
+###  http://lemon-model.net/lemon#lexicalForm
+<http://lemon-model.net/lemon#lexicalForm> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#property
+<http://lemon-model.net/lemon#property> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#reference
+<http://lemon-model.net/lemon#reference> rdf:type owl:ObjectProperty ,
+                                                  owl:FunctionalProperty ;
+                                         rdfs:domain <http://lemon-model.net/lemon#LexicalSense> ;
+                                         rdfs:comment "A reference to an external resource"@en ;
+                                         rdfs:label "Reference"@en ,
+                                                    "Referencia"@es ,
+                                                    "Referentie"@nl ,
+                                                    "Referenz"@de ,
+                                                    "Référence"@fr .
+
+
+###  http://lemon-model.net/lemon#sense
+<http://lemon-model.net/lemon#sense> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
+                                     rdfs:range <http://lemon-model.net/lemon#LexicalSense> ;
+                                     rdfs:comment "Indicates the sense of a lexical entry"@en ;
+                                     rdfs:label "Acepción"@es ,
+                                                "Sense"@en ,
+                                                "Signification"@fr ,
+                                                "Sinn"@de ,
+                                                "Zin"@nl .
+
+
+###  http://lemon-model.net/lemon#senseRelation
+<http://lemon-model.net/lemon#senseRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://lemon-model.net/lemon#subsense
+<http://lemon-model.net/lemon#subsense> rdf:type owl:ObjectProperty .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#gender
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> ;
+                                                     rdfs:range <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> ;
+                                                     <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1297> ,
+                                                                                               <http://www.isocat.org/datcat/DC-245> ;
+                                                     rdfs:comment "A grammatical category that indicates grammatical relationships between words in sentences." ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> ;
+                                                     rdfs:label "grammatical gender" .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty
+<http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://lemon-model.net/lemon#property> ;
+                                                                      rdfs:range <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
+                                                                      rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#negative
+<http://www.lexinfo.net/ontology/2.0/lexinfo#negative> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> ;
+                                                       rdfs:range <http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> ;
+                                                       <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" ;
+                                                       <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1839> ;
+                                                       rdfs:comment "denotes the negation or the absence" ;
+                                                       rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> ;
+                                                       rdfs:label "negative" ;
+                                                       owl:versionInfo "1:0" .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#number
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> ;
+                                                     rdfs:range <http://www.lexinfo.net/ontology/2.0/lexinfo#Number> ;
+                                                     <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" ,
+                                                                                                "Wright, Sue Ellen" ;
+                                                     <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1298> ,
+                                                                                               <http://www.isocat.org/datcat/DC-251> ;
+                                                     rdfs:comment "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to." ,
+                                                                  "In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word." ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> ;
+                                                     rdfs:label "grammatical number" ;
+                                                     owl:versionInfo "1:0" .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#person
+<http://www.lexinfo.net/ontology/2.0/lexinfo#person> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> ;
+                                                     rdfs:range <http://www.lexinfo.net/ontology/2.0/lexinfo#Person> ;
+                                                     <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" ;
+                                                     <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1328> ;
+                                                     rdfs:comment "Indication of grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form." ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> ;
+                                                     rdfs:label "person" ;
+                                                     owl:versionInfo "1:0" .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#translation
+<http://www.lexinfo.net/ontology/2.0/lexinfo#translation> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://lemon-model.net/lemon#senseRelation> ;
+                                                          rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  https://w3id.org/def/easytv#firstFrame
+:firstFrame rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :isComponsedBy ;
+            rdfs:domain :Video ;
+            rdfs:range :VideoFrame .
+
+
+###  https://w3id.org/def/easytv#firstItem
+:firstItem rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasComponent ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :LinguisticExpression ;
+           rdfs:range :LinguisticExpressionItem ;
+           rdfs:comment "Links to the first item of a decomposition for a linguistic expression"@en ;
+           rdfs:label "first item"@en .
+
+
+###  https://w3id.org/def/easytv#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :LinguisticExpression ;
+              rdfs:range :LinguisticExpressionItem ;
+              rdfs:comment "Denotes the components of a linguistic expression"@en ;
+              rdfs:label "has component"@en .
+
+
+###  https://w3id.org/def/easytv#hasForm
+:hasForm rdf:type owl:ObjectProperty ;
+         rdfs:domain :LinguisticExpressionItem ;
+         rdfs:range <http://lemon-model.net/lemon#Form> ;
+         rdfs:label "has form"@en .
+
+
+###  https://w3id.org/def/easytv#hasRealization
+:hasRealization rdf:type owl:ObjectProperty ;
+                rdfs:label "has realization"@en .
+
+
+###  https://w3id.org/def/easytv#isComponentOf
+:isComponentOf rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isComponsedBy ;
+               rdfs:domain :VideoFrame ;
+               rdfs:range :Video ;
+               rdfs:label "is component of"@en .
+
+
+###  https://w3id.org/def/easytv#isComponsedBy
+:isComponsedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain :Video ;
+               rdfs:range :VideoFrame ;
+               rdfs:label "is composed by"@en .
+
+
+###  https://w3id.org/def/easytv#nextFrame
+:nextFrame rdf:type owl:ObjectProperty ;
+           rdfs:domain :VideoFrame ;
+           rdfs:range :VideoFrame .
+
+
+###  https://w3id.org/def/easytv#nextItem
+:nextItem rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :LinguisticExpressionItem ;
+          rdfs:range :LinguisticExpressionItem ;
+          rdfs:label "next item"@en .
+
+
+###  https://w3id.org/def/easytv#relates
+:relates rdf:type owl:ObjectProperty ;
+         rdfs:domain :Translation ;
+         rdfs:range :LinguisticExpression ;
+         rdfs:comment "Link to the linguistic expressions involved in a translation relationship. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en ;
+         rdfs:label "relates"@en .
+
+
+###  https://w3id.org/def/easytv#signForm
+:signForm rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://lemon-model.net/lemon#lexicalForm> ;
+          rdfs:domain <http://lemon-model.net/lemon#LexicalEntry> ;
+          rdfs:range :SignedForm ;
+          rdfs:label "sign form"@en .
+
+
+###  https://w3id.org/def/easytv#signedRep
+:signedRep rdf:type owl:ObjectProperty ;
+           rdfs:domain :SignedForm ;
+           rdfs:range :Video ;
+           rdfs:label "signed representation"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://lemon-model.net/lemon#language
+<http://lemon-model.net/lemon#language> rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "The language of a given lexicon. This should be some ISO-639 string"@en ;
+                                        rdfs:label "Language"@en ,
+                                                   "Langue"@fr ,
+                                                   "Lengua"@es ,
+                                                   "Sprache"@de ,
+                                                   "Taal"@nl .
+
+
+###  http://lemon-model.net/lemon#representation
+<http://lemon-model.net/lemon#representation> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://lemon-model.net/lemon#Form> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "A realisation of a given form"@en ;
+                                              rdfs:label "Darstellung"@de ,
+                                                         "Representación"@es ,
+                                                         "Representation"@en ,
+                                                         "Représentation"@fr ,
+                                                         "Voorstelling"@nl .
+
+
+###  http://lemon-model.net/lemon#writtenRep
+<http://lemon-model.net/lemon#writtenRep> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://lemon-model.net/lemon#representation> ;
+                                          rdfs:domain <http://lemon-model.net/lemon#Form> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Gives the written representation of a given form"@en ;
+                                          rdfs:label "Representación escrita"@es ,
+                                                     "Représentation écrite"@fr ,
+                                                     "Schriftelijke voorstelling"@nl ,
+                                                     "Schriftliche Darstellung"@de ,
+                                                     "Written representation"@en .
+
+
+###  https://w3id.org/def/easytv#confidence
+:confidence rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Translation ;
+            rdfs:range xsd:float ;
+            rdfs:comment "Percentage of correctness of a translation."@en ;
+            rdfs:label "confidence"@en .
+
+
+###  https://w3id.org/def/easytv#expertSuggestion
+:expertSuggestion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Translation ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Boolean property that indicates (if true) whether the translation has been suggested by an expert."@en ;
+                  rdfs:label "expert suggestion"@en .
+
+
+###  https://w3id.org/def/easytv#url
+:url rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://babelnet.org/model/babelnet#BabelGloss
+<http://babelnet.org/model/babelnet#BabelGloss> rdf:type owl:Class .
+
+
+###  http://lemon-model.net/lemon#Form
+<http://lemon-model.net/lemon#Form> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://lemon-model.net/lemon#representation> ;
+                                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                    owl:disjointWith <http://lemon-model.net/lemon#LexicalEntry> ,
+                                                     <http://lemon-model.net/lemon#LexicalSense> ,
+                                                     <http://lemon-model.net/lemon#Lexicon> ;
+                                    rdfs:comment "A given written or spoken realisation of a lexical entry"@en ;
+                                    rdfs:label "Form"@de ,
+                                               "Form"@en ,
+                                               "Forma"@es ,
+                                               "Forme"@fr ,
+                                               "Vorm"@nl ,
+                                               "Форма"@ru .
+
+
+###  http://lemon-model.net/lemon#LemonElement
+<http://lemon-model.net/lemon#LemonElement> rdf:type owl:Class ;
+                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :relates ;
+                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass :LinguisticExpression
+                                                            ] .
+
+
+###  http://lemon-model.net/lemon#LexicalEntry
+<http://lemon-model.net/lemon#LexicalEntry> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://lemon-model.net/lemon#lexicalForm> ;
+                                                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://lemon-model.net/lemon#canonicalForm> ;
+                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                            ] ;
+                                            owl:disjointWith <http://lemon-model.net/lemon#LexicalSense> ,
+                                                             <http://lemon-model.net/lemon#Lexicon> ;
+                                            rdfs:comment "An entry in the lexicon. This may be any morpheme, word, compound, phrase or clause that is included in the lexicon"@en ;
+                                            rdfs:label "Entrada léxica"@es ,
+                                                       "Entrée lexicale"@fr ,
+                                                       "Lexical entry"@en ,
+                                                       "Lexikaal item"@nl ,
+                                                       "Lexikoneintrag"@de ,
+                                                       "Лексическая единица"@ru .
+
+
+###  http://lemon-model.net/lemon#LexicalSense
+<http://lemon-model.net/lemon#LexicalSense> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> ,
+                                                            [ rdf:type owl:Class ;
+                                                              owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://lemon-model.net/lemon#subsense> ;
+                                                                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://lemon-model.net/lemon#reference> ;
+                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                            ]
+                                                                          )
+                                                            ] ;
+                                            owl:disjointWith <http://lemon-model.net/lemon#Lexicon> ;
+                                            rdfs:comment "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en ;
+                                            rdfs:label "Acepción léxica"@es ,
+                                                       "Lexical sense"@en ,
+                                                       "Lexikaal zin"@nl ,
+                                                       "Lexikonsinn"@de ,
+                                                       "Signification lexicale"@fr .
+
+
+###  http://lemon-model.net/lemon#Lexicon
+<http://lemon-model.net/lemon#Lexicon> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://lemon-model.net/lemon#LemonElement> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://lemon-model.net/lemon#entry> ;
+                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://lemon-model.net/lemon#language> ;
+                                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                       ] ;
+                                       rdfs:comment "The lexicon object. This object is specific to the given language and/or domain it describes"@en ;
+                                       rdfs:label "Lexicon"@en ,
+                                                  "Lexicon"@nl ,
+                                                  "Lexicón"@es ,
+                                                  "Lexikon"@de ,
+                                                  "Lexique"@fr ,
+                                                  "Лексикон"@ru .
+
+
+###  http://lemon-model.net/lemon#Phrase
+<http://lemon-model.net/lemon#Phrase> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://lemon-model.net/lemon#LexicalEntry> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasComponent ;
+                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:comment "A phrase in lemon is defined in the looser sense of a sequence of words, it does not have to a fully grammatical phrase"@en ;
+                                      rdfs:label "Phrase"@de ,
+                                                 "Phrase"@en ,
+                                                 "Sintagma"@es ,
+                                                 "Syntagme"@fr ,
+                                                 "Zinsdeel"@nl ,
+                                                 "Фраза"@ru .
+
+
+###  http://lemon-model.net/lemon#PropertyValue
+<http://lemon-model.net/lemon#PropertyValue> rdf:type owl:Class .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#Gender
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty
+<http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://lemon-model.net/lemon#PropertyValue> ;
+                                                                      rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#Negative
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
+                                                       rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#Number
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Number> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.lexinfo.net/ontology/2.0/lexinfo#Person
+<http://www.lexinfo.net/ontology/2.0/lexinfo#Person> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.lexinfo.net/ontology/2.0/lexinfo#MorphosyntacticProperty> ;
+                                                     rdfs:isDefinedBy <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/easytv#LinguisticExpression
+:LinguisticExpression rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://lemon-model.net/lemon#language> ;
+                                        owl:someValuesFrom rdfs:Literal
+                                      ] ;
+                      rdfs:label "Linguistic expression"@en .
+
+
+###  https://w3id.org/def/easytv#LinguisticExpressionItem
+:LinguisticExpressionItem rdf:type owl:Class ;
+                          rdfs:comment "Items in a linguistic expression"@en ;
+                          rdfs:label "Linguistic expression item"@en .
+
+
+###  https://w3id.org/def/easytv#SignedForm
+:SignedForm rdf:type owl:Class ;
+            rdfs:subClassOf <http://lemon-model.net/lemon#Form> ;
+            rdfs:label "Signed form"@en .
+
+
+###  https://w3id.org/def/easytv#SignedLinguisticExpression
+:SignedLinguisticExpression rdf:type owl:Class ;
+                            rdfs:subClassOf :LinguisticExpression ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasRealization ;
+                                              owl:someValuesFrom :Video
+                                            ] ;
+                            rdfs:label "Signed linguistic expression"@en .
+
+
+###  https://w3id.org/def/easytv#Translation
+:Translation rdf:type owl:Class ;
+             rdfs:comment "Translation relation between two or more linguistic expressions. Model inspired by the Lemon Ontolex vartrans module (https://www.w3.org/2016/05/ontolex/#variation-translation-vartrans)"@en .
+
+
+###  https://w3id.org/def/easytv#Video
+:Video rdf:type owl:Class .
+
+
+###  https://w3id.org/def/easytv#VideoFrame
+:VideoFrame rdf:type owl:Class ;
+            rdfs:subClassOf :Video .
+
+
+###  https://w3id.org/def/easytv#WrittenLinguisticExpression
+:WrittenLinguisticExpression rdf:type owl:Class ;
+                             rdfs:subClassOf :LinguisticExpression ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasRealization ;
+                                               owl:someValuesFrom :Video
+                                             ] ;
+                             rdfs:label "Written linguistic expression"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
